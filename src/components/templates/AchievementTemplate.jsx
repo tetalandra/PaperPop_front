@@ -126,25 +126,60 @@ const AchievementTemplate = ({ data }) => {
         );
     }
 
-    // Default Variant 0: Premium Image/Layout Overlay
+    // Default Variant 0: Premium Certificate / Overlay Layout
     return (
-        <div className="relative w-full h-full bg-neutral-900 flex flex-col items-center justify-center p-12 overflow-hidden font-sans" style={backgroundStyle}>
+        <div className="relative w-full h-full bg-black flex flex-col items-center justify-center p-12 overflow-hidden font-sans" style={backgroundStyle}>
             <ImenaBranding />
-            <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] z-0"></div>
+
+            {/* Cinematic Gradient Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/20 to-transparent z-0 opacity-60"></div>
+
             <div className="relative z-10 w-full flex flex-col items-center text-center">
-                <div className="w-16 h-1 bg-brand-gold mb-8"></div>
-                <h2 className="text-brand-gold uppercase tracking-[0.4em] text-xs font-bold mb-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                    {title || "Certificate of Excellence"}
-                </h2>
-                <h1 className="text-5xl font-serif italic text-white mb-6 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {subtitle || "Recipient Name"}
-                </h1>
-                <p className="text-white/80 text-sm max-w-sm mb-10 italic leading-relaxed">
-                    "{message || "For outstanding performance and dedication to excellence."}"
-                </p>
-                <div className="flex gap-12 text-white/60 text-[10px] font-bold uppercase tracking-widest border-t border-white/10 pt-8 mt-4">
-                    <div className="text-center"><span className="block text-brand-gold mb-1">Date</span>{date || "2024"}</div>
-                    <div className="text-center"><span className="block text-brand-gold mb-1">Authority</span>{location || "Head of Department"}</div>
+                {/* Personal Image Component: Rendered as a prominent feature */}
+                <div className="relative mb-10 group">
+                    <div className="absolute -inset-1 bg-brand-gold/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="relative w-64 h-80 rounded-[4px] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] border-[0.5px] border-white/10 overflow-hidden transform-gpu transition-transform duration-700 group-hover:scale-[1.02]">
+                        {image ? (
+                            <img src={image} className="w-full h-full object-cover brightness-110 contrast-105" alt="Award Recipient" />
+                        ) : (
+                            <div className="w-full h-full bg-neutral-900/80 backdrop-blur-sm flex flex-col items-center justify-center border-2 border-dashed border-white/5">
+                                <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-4">
+                                    <div className="w-8 h-8 bg-brand-gold/20 rounded-full"></div>
+                                </div>
+                                <span className="text-[10px] text-white/30 font-black tracking-widest uppercase italic">Photo Here</span>
+                            </div>
+                        )}
+                        {/* Reflective Surface Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-20 pointer-events-none"></div>
+                    </div>
+                </div>
+
+                <div className="space-y-4">
+                    <div className="flex flex-col items-center">
+                        <div className="w-12 h-[1px] bg-brand-gold/40 mb-6"></div>
+                        <h2 className="text-brand-gold uppercase tracking-[0.5em] text-[9px] font-black mb-3">
+                            {title || "Special Recognition"}
+                        </h2>
+                        <h1 className="text-4xl font-serif text-white mb-2 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                            {subtitle || "Recipient Name"}
+                        </h1>
+                        <div className="w-12 h-[1px] bg-brand-gold/40 mt-6"></div>
+                    </div>
+
+                    <p className="text-white/70 text-xs max-w-sm mb-10 leading-relaxed uppercase tracking-[0.2em] font-medium pt-4">
+                        {message || "For your exceptional contributions and unwavering commitment to excellence."}
+                    </p>
+
+                    <div className="flex gap-16 text-white/40 text-[9px] font-black uppercase tracking-[0.3em] border-t border-white/5 pt-10 mt-6">
+                        <div className="text-center group">
+                            <span className="block text-brand-gold/60 mb-2 transition-colors group-hover:text-brand-gold">Date Presented</span>
+                            {date || "2024"}
+                        </div>
+                        <div className="text-center group">
+                            <span className="block text-brand-gold/60 mb-2 transition-colors group-hover:text-brand-gold">Location</span>
+                            {location || "Official Venue"}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

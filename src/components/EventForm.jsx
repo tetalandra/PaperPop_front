@@ -4,7 +4,7 @@ import {
     Gift, Bell, BookOpen, Users, Feather, Award as AwardIcon, Image as ImageIcon,
     CheckCircle, MessageSquare, Star, PartyPopper, Crown, Scissors, Trophy,
     GraduationCap, Presentation, Flower2, Flame, User, Type, AlignLeft,
-    ArrowLeft, Download, Calendar, MapPin, Clock, Phone, FileText, Save, Loader2
+    ArrowLeft, Download, Calendar, MapPin, Clock, Phone, FileText, Save, Loader2, Megaphone
 } from 'lucide-react';
 import InvitationPreview from './InvitationPreview';
 import { downloadPDF, downloadPNG } from '../utils/pdfUtils';
@@ -17,7 +17,9 @@ import birthdayV7 from '../assets/templates/birthday_variant_7.jpg';
 import noticeV5 from '../assets/templates/notice_variant_5.jpg';
 import noticeV6 from '../assets/templates/notice_variant_6.jpg';
 import noticeV7 from '../assets/templates/notice_variant_7.jpg';
-
+import assemblyTuesday from '../assets/templates/17.jpg';
+import awardBg from '../assets/templates/18.jpg';
+import assemblySaturday from '../assets/templates/19.jpg';
 const InputGroup = ({
     label, name, value, onChange, type = "text", icon: Icon, placeholder, multiline = false,
     delay, isFocused, onFocus, onBlur, className, required = false
@@ -34,10 +36,10 @@ const InputGroup = ({
             style={{ animationDelay: `${delay}ms` }}
         >
             <div
-                className={`relative group bg-card/40 backdrop-blur-xl border rounded-2xl overflow-hidden transition-all duration-500
+                className={`relative group bg-card/60 backdrop-blur-2xl border rounded-[1.25rem] overflow-hidden transition-all duration-700
                 ${isFocused
-                        ? 'border-brand-blue/50 shadow-[0_20px_40px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.6)] bg-card/80 -translate-y-1'
-                        : 'border-foreground/5 hover:border-foreground/10'
+                        ? 'border-brand-blue/40 shadow-[0_25px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_25px_50px_rgba(0,0,0,0.5)] bg-card/90 -translate-y-1'
+                        : 'border-foreground/[0.03] hover:border-foreground/[0.08] shadow-sm'
                     }
             `}
             >
@@ -120,13 +122,12 @@ const EventForm = ({ onBack }) => {
         'announcement-6': { ...initialFormState, title: 'Luxury Event', variant: 6, backgroundType: 'image', backgroundImage: noticeV6.src || noticeV6 },
         'announcement-7': { ...initialFormState, title: 'Grand Opening', variant: 7, backgroundType: 'image', backgroundImage: noticeV7.src || noticeV7 },
         // Achievement
-        'achievement-0': { ...initialFormState, title: 'Certificate of Excellence', variant: 0, backgroundType: 'color' },
+        'achievement-0': { ...initialFormState, title: 'Certificate of Excellence', variant: 0, backgroundType: 'image', backgroundImage: awardBg.src || awardBg },
         'achievement-30': { ...initialFormState, title: 'SOFTWARE ENGINEER', subtitle: 'David Lee', location: 'COMPANY NAME', variant: 30, backgroundType: 'color' },
         'achievement-31': { ...initialFormState, subtitle: 'JORDAN JONSON', date: 'CLASS OF 2026', variant: 31, backgroundType: 'color' },
         // Assembly
-        'assembly-1': { ...initialFormState, title: 'Weekly Assembly', variant: 1, backgroundType: 'color' },
-        'assembly-3': { ...initialFormState, variant: 3 },
-        'assembly-4': { ...initialFormState, variant: 4 },
+        'assembly-3': { ...initialFormState, title: 'Weekly Assembly', variant: 3, backgroundType: 'image', backgroundImage: assemblyTuesday.src || assemblyTuesday },
+        'assembly-4': { ...initialFormState, variant: 4, backgroundType: 'image', backgroundImage: assemblySaturday.src || assemblySaturday },
         // Valentine
         'valentine-10': { ...initialFormState, title: "Valentine's Dinner", subtitle: 'Deep Velvet Romance', variant: 10 },
         'valentine-11': { ...initialFormState, title: "Be Mine", subtitle: 'Soft Peony Lace', variant: 11 },
@@ -237,10 +238,10 @@ const EventForm = ({ onBack }) => {
     };
 
     const templates = [
-        { id: 'birthday', label: 'Birthday', icon: <Gift className="w-4 h-4" />, color: 'from-brand-blue/20' },
-        { id: 'announcement', label: 'Notices', icon: <Bell className="w-4 h-4" />, color: 'from-brand-gold/20' },
-        { id: 'achievement', label: 'Award', icon: <AwardIcon className="w-4 h-4" />, color: 'from-brand-blue/20' },
-        { id: 'assembly', label: 'Assembly', icon: <Users className="w-4 h-4" />, color: 'from-brand-gold/20' },
+        { id: 'birthday', label: 'Birthday', icon: <PartyPopper className="w-4 h-4" />, color: 'from-brand-blue/20' },
+        { id: 'announcement', label: 'Notices', icon: <Megaphone className="w-4 h-4" />, color: 'from-brand-gold/20' },
+        { id: 'achievement', label: 'Award', icon: <Trophy className="w-4 h-4" />, color: 'from-brand-blue/20' },
+        { id: 'assembly', label: 'Assembly', icon: <Presentation className="w-4 h-4" />, color: 'from-brand-gold/20' },
         { id: 'valentine', label: 'Valentine', icon: <Heart className="w-4 h-4" />, color: 'from-red-500/20' },
         { id: 'remembering', label: 'Remembering', icon: <Feather className="w-4 h-4" />, color: 'from-neutral-500/20' },
     ];
@@ -302,6 +303,7 @@ const EventForm = ({ onBack }) => {
             case 'achievement':
                 config.showTime = false;
                 config.showPhone = false;
+                config.showImage = true; // Enabled for 18.jpg
                 config.titleLabel = 'Award Holder';
                 config.locationLabel = 'Award Title';
                 config.requiredFields = ['title', 'location', 'date'];
@@ -320,7 +322,7 @@ const EventForm = ({ onBack }) => {
                 }
 
                 config.variants = [
-                    { id: 0, name: 'Premium Certificate', preview: <AwardIcon className="w-5 h-5" /> },
+                    { id: 0, name: 'Premium Certificate', preview: <AwardIcon className="w-5 h-5" />, img: awardBg.src || awardBg },
                     { id: 30, name: 'Employee Month', preview: <Trophy className="w-5 h-5" /> },
                     { id: 31, name: 'Graduation', preview: <GraduationCap className="w-5 h-5" /> }
                 ];
@@ -330,9 +332,8 @@ const EventForm = ({ onBack }) => {
                 config.titleLabel = 'Assembly Name';
                 config.requiredFields = ['title', 'date', 'location'];
                 config.variants = [
-                    { id: 1, name: 'Luxury Stage', preview: <Presentation className="w-5 h-5" /> },
-                    { id: 3, name: 'Tuesday Session', preview: <Calendar className="w-5 h-5" /> },
-                    { id: 4, name: 'Saturday Session', preview: <Calendar className="w-5 h-5" /> }
+                    { id: 3, name: 'Tuesday Session', preview: <Calendar className="w-5 h-5" />, img: assemblyTuesday.src || assemblyTuesday },
+                    { id: 4, name: 'Saturday Session', preview: <Calendar className="w-5 h-5" />, img: assemblySaturday.src || assemblySaturday }
                 ];
                 break;
             case 'valentine':
@@ -371,12 +372,12 @@ const EventForm = ({ onBack }) => {
         <div className="min-h-screen bg-background text-foreground flex flex-col lg:flex-row overflow-hidden font-sans transition-colors duration-500">
 
             {/* LEFT SIDEBAR: CREATIVE CONTROLS */}
-            <div className="w-full lg:w-[460px] h-screen overflow-y-auto bg-card border-r border-foreground/5 relative z-20 custom-scrollbar flex flex-col shadow-2xl transition-colors duration-500">
+            <div className="w-full lg:w-[580px] h-screen overflow-y-auto bg-card/95 backdrop-blur-2xl border-r border-foreground/5 relative z-20 custom-scrollbar flex flex-col shadow-[20px_0_60px_rgba(0,0,0,0.05)] transition-all duration-700 ease-in-out">
 
                 {/* Visual Flair: Top Gradient */}
                 <div className={`absolute top-0 left-0 w-full h-64 bg-gradient-to-b ${templates.find(t => t.id === templateType)?.color || 'from-amber-500/10'} to-transparent opacity-30 pointer-events-none z-0 transition-all duration-1000`}></div>
 
-                <div className="p-8 lg:p-10 pb-32 relative z-10">
+                <div className="p-8 lg:p-12 pb-32 relative z-10">
                     {/* Header Navigation */}
                     <div className="flex justify-between items-center mb-10">
                         <button onClick={onBack} className="group flex items-center gap-3 text-[10px] font-black text-neutral-500 hover:text-foreground transition-all tracking-[0.3em] uppercase">
@@ -389,12 +390,12 @@ const EventForm = ({ onBack }) => {
                         </div>
                     </div>
 
-                    <header className="mb-12">
-                        <h1 className="text-4xl font-serif text-foreground mb-2 leading-tight">
-                            Create <br />
-                            <span className="italic text-brand-blue">Masterpiece</span>
+                    <header className="mb-14">
+                        <h1 className="text-5xl font-serif text-foreground mb-3 leading-[1.1] tracking-tight">
+                            Design Your <br />
+                            <span className="italic bg-gradient-to-r from-brand-blue to-brand-gold bg-clip-text text-transparent">Event Masterpiece</span>
                         </h1>
-                        <p className="text-[10px] text-neutral-500 font-medium uppercase tracking-[0.2em]">Tailor every detail to perfection</p>
+                        <p className="text-[11px] text-neutral-500 font-bold uppercase tracking-[0.3em] opacity-80">Tailor every detail to perfection</p>
                     </header>
 
                     {/* Category Selection: Luxury Grid */}
@@ -413,7 +414,7 @@ const EventForm = ({ onBack }) => {
                                             birthday: 5,
                                             announcement: 5,
                                             achievement: 0,
-                                            assembly: 1,
+                                            assembly: 3,
                                             valentine: 10,
                                             remembering: 20
                                         };
@@ -442,10 +443,10 @@ const EventForm = ({ onBack }) => {
                     </div>
 
                     {/* Collection Gallery: Horizontal Luxury Scroll */}
-                    <div className="mb-12">
-                        <div className="flex items-center justify-between mb-4">
-                            <label className="text-[10px] text-neutral-500 font-black tracking-[0.3em] uppercase">Premium Collection</label>
-                            <span className="text-[9px] text-brand-gold font-semibold uppercase tracking-widest bg-brand-gold/10 px-2.5 py-1 rounded-full border border-brand-gold/20">6 Styles Available</span>
+                    <div className="mb-14">
+                        <div className="flex items-center justify-between mb-6">
+                            <label className="text-[11px] text-neutral-500 font-black tracking-[0.4em] uppercase">Premium Collection</label>
+                            <span className="text-[9px] text-brand-gold font-bold uppercase tracking-widest bg-brand-gold/10 px-3 py-1.5 rounded-full border border-brand-gold/20 backdrop-blur-md">6 Handpicked Styles</span>
                         </div>
                         <div className="flex gap-4 overflow-x-auto pb-6 custom-scrollbar snap-x">
                             {predefinedBackgrounds.filter(bg => bg.category === templateType).map((bg) => (
@@ -647,24 +648,14 @@ const EventForm = ({ onBack }) => {
                 </div>
 
                 {/* Fixed Footer Actions */}
-                <div className="sticky bottom-0 left-0 w-full p-8 bg-background/80 backdrop-blur-2xl border-t border-foreground/10 z-[100] shadow-[0_-30px_60px_rgba(0,0,0,0.1)] dark:shadow-[0_-30px_60px_rgba(0,0,0,0.8)] flex flex-col gap-4">
-                    <div className="flex gap-4">
-                        <button
-                            onClick={handleSave}
-                            disabled={isSaving}
-                            className="flex-1 rounded-2xl bg-foreground/5 text-foreground font-black py-4 transition-all duration-300 hover:bg-foreground/10 border border-foreground/10 active:scale-[0.98] disabled:opacity-50"
-                        >
-                            <span className="flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px] font-semibold">
-                                {isSaving ? <Loader2 className="w-4 h-4 animate-spin text-brand-blue" /> : <Save className="w-4 h-4 text-brand-blue" />}
-                                Save
-                            </span>
-                        </button>
+                <div className="sticky bottom-0 left-0 w-full p-10 bg-background/90 backdrop-blur-3xl border-t border-foreground/[0.03] z-[100] shadow-[0_-40px_80px_rgba(0,0,0,0.05)] dark:shadow-[0_-40px_80px_rgba(0,0,0,0.7)] flex flex-col gap-5">
+                    <div className="flex gap-5">
                         <button
                             onClick={handleDownload}
-                            className="flex-[2.5] relative group overflow-hidden rounded-2xl bg-brand-blue text-white py-4 shadow-[0_15px_30px_rgba(37,99,235,0.2)] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(37,99,235,0.4)] hover:-translate-y-1 active:translate-y-0"
+                            className="flex-[2.5] relative group overflow-hidden rounded-[1.25rem] bg-brand-blue text-white py-5 shadow-[0_20px_40px_rgba(37,99,235,0.25)] transition-all duration-500 hover:shadow-[0_25px_50px_rgba(37,99,235,0.45)] hover:-translate-y-1 active:translate-y-0"
                         >
-                            <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                            <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px] font-semibold">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out" />
+                            <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.4em] uppercase text-[10px] font-black">
                                 <Download className="w-4 h-4" />
                                 Export PDF
                             </span>
@@ -679,10 +670,10 @@ const EventForm = ({ onBack }) => {
                                     showToast('Failed to download PNG', 'error');
                                 }
                             }}
-                            className="flex-[1] relative group overflow-hidden rounded-2xl bg-brand-gold text-white py-4 shadow-[0_15px_30px_rgba(245,158,11,0.2)] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(245,158,11,0.4)] hover:-translate-y-1 active:translate-y-0"
+                            className="flex-[1] relative group overflow-hidden rounded-[1.25rem] bg-brand-gold text-white py-5 shadow-[0_20px_40px_rgba(245,158,11,0.25)] transition-all duration-500 hover:shadow-[0_25px_50px_rgba(245,158,11,0.45)] hover:-translate-y-1 active:translate-y-0"
                         >
-                            <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                            <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px] font-semibold">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out" />
+                            <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.4em] uppercase text-[10px] font-black">
                                 <ImageIcon className="w-4 h-4" />
                                 PNG
                             </span>
@@ -701,10 +692,11 @@ const EventForm = ({ onBack }) => {
 
                 {/* Cinematic Environment */}
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-brand-blue/10 via-transparent to-transparent opacity-50 blur-[150px]"></div>
-                    <div className="absolute bottom-0 right-0 w-[50%] h-[50%] bg-[radial-gradient(circle_at_100%_100%,rgba(245,158,11,0.05)_0%,transparent_70%)] blur-[100px]"></div>
-                    {/* Perspective lines */}
-                    <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.08)_0%,transparent_70%)] opacity-60 blur-[120px]"></div>
+                    <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.04)_0%,transparent_60%)] blur-[100px]"></div>
+                    <div className="absolute bottom-0 left-0 w-[60%] h-[60%] bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.04)_0%,transparent_60%)] blur-[100px]"></div>
+                    {/* Perspective lines/texture */}
+                    <div className="absolute inset-0 opacity-[0.02] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] mix-blend-overlay"></div>
                 </div>
 
                 <div className="relative z-10 flex flex-col items-center">
@@ -715,12 +707,13 @@ const EventForm = ({ onBack }) => {
                     </div>
 
                     {/* The Masterpiece Stage */}
-                    <div className="relative group transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] transform hover:scale-[1.03] hover:rotate-y-1 hover:rotate-x-1">
-                        {/* Shadow Diffusion */}
-                        <div className="absolute -inset-10 bg-black/60 blur-[60px] rounded-full opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                    <div className="relative group transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] transform-gpu hover:scale-[1.04]">
+                        {/* Shadow Diffusion: Deeper and more natural */}
+                        <div className="absolute -inset-16 bg-black/40 blur-[80px] rounded-full opacity-40 group-hover:opacity-70 transition-all duration-700"></div>
+                        <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[80%] h-20 bg-black/40 blur-[50px] rounded-[100%] transition-opacity duration-700 opacity-50 group-hover:opacity-80"></div>
 
                         {/* Frame and Content */}
-                        <div className="relative shadow-[0_80px_150px_-30px_rgba(0,0,0,0.9)] rounded-[5px] ring-[0.5px] ring-foreground/20 overflow-hidden transform-gpu">
+                        <div className="relative shadow-[0_100px_200px_-50px_rgba(0,0,0,0.95)] rounded-[6px] ring-[1px] ring-foreground/[0.08] overflow-hidden transform-gpu bg-card">
                             <InvitationPreview
                                 ref={previewRef}
                                 data={{ ...activeData, image: templateImages[`${templateType}-${activeData.variant}`] }}
