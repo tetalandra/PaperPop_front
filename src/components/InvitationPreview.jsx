@@ -3,6 +3,8 @@ import BirthdayTemplate from './templates/BirthdayTemplate';
 import AssemblyTemplate from './templates/AssemblyTemplate';
 import AchievementTemplate from './templates/AchievementTemplate';
 import AnnouncementTemplate from './templates/AnnouncementTemplate';
+import ValentineTemplate from './templates/ValentineTemplate';
+import RememberingTemplate from './templates/RememberingTemplate';
 
 const InvitationPreview = forwardRef(({ data, templateType = 'birthday' }, ref) => {
 
@@ -14,6 +16,10 @@ const InvitationPreview = forwardRef(({ data, templateType = 'birthday' }, ref) 
                 return <AchievementTemplate data={data} />;
             case 'announcement':
                 return <AnnouncementTemplate data={data} />;
+            case 'valentine':
+                return <ValentineTemplate data={data} />;
+            case 'remembering':
+                return <RememberingTemplate data={data} />;
             case 'birthday':
             default:
                 return <BirthdayTemplate data={data} />;

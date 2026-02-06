@@ -1,4 +1,5 @@
 import React from 'react';
+import brandLogo from '@/assets/brand-logo.png';
 
 const AnnouncementTemplate = ({ data }) => {
     const { title, subtitle, date, image, message, variant = 0, location, time, phone, backgroundType, backgroundImage } = data;
@@ -10,9 +11,9 @@ const AnnouncementTemplate = ({ data }) => {
     } : {};
 
     const ImenaBranding = () => (
-        <div className="absolute bottom-4 right-4 z-[60] flex items-center gap-2 opacity-30 select-none pointer-events-none grayscale">
-            <img src="/imena-logo.svg" alt="Imena" className="h-6 w-auto" />
-            <span className="text-[8px] font-bold text-neutral-500 uppercase tracking-[0.2em]">Designed by Imena</span>
+        <div className="absolute bottom-6 right-6 z-[60] flex items-center gap-3 opacity-80 select-none pointer-events-none hover:opacity-100 transition-opacity">
+            <img src={brandLogo.src || brandLogo} alt="Imena" className="h-8 w-auto drop-shadow-lg" />
+            <span className="text-[9px] font-bold text-white/60 uppercase tracking-[0.2em]">Designed by Imena</span>
         </div>
     );
 
@@ -26,8 +27,8 @@ const AnnouncementTemplate = ({ data }) => {
                 <div className="absolute top-[8%] bottom-[8%] left-[10%] right-[10%] bg-black/95 z-0 border border-amber-500/10 shadow-[0_0_100px_50px_rgba(0,0,0,0.95)]"></div>
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full px-16 text-center">
-                    <div className="mb-4 mt-12 bg-black/80 px-4 py-2 border border-amber-500/20 inline-block">
-                        <div className="text-[10px] font-black tracking-[0.5em] text-amber-500 uppercase">{subtitle || "COMPANY NAME"}</div>
+                    <div className="mb-4 mt-12 bg-black/80 px-4 py-2 border border-brand-gold/20 inline-block">
+                        <div className="text-[10px] font-black tracking-[0.5em] text-brand-gold uppercase">{subtitle || "COMPANY NAME"}</div>
                     </div>
                     <div className="text-[8px] tracking-[0.4em] uppercase mb-10 opacity-50 font-bold italic">Requests the honor of your presence</div>
 
@@ -37,15 +38,15 @@ const AnnouncementTemplate = ({ data }) => {
 
                     <div className="flex items-center gap-12 border-y border-white/5 py-8 mb-12 w-full justify-center">
                         <div className="text-[9px] font-black uppercase tracking-[0.4em] text-neutral-500">SATURDAY</div>
-                        <div className="text-6xl font-serif text-amber-500 leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>{date?.split(' ')[1] || "17"}</div>
+                        <div className="text-6xl font-serif text-brand-gold leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>{date?.split(' ')[1] || "17"}</div>
                         <div className="text-[9px] font-black uppercase tracking-[0.4em] text-neutral-500">{time || "6:00 PM"}</div>
                     </div>
 
                     <div className="space-y-6">
                         <div className="text-[11px] font-black tracking-[0.4em] uppercase text-white shadow-sm inline-block">{location || "THE GRAND BALLROOM"}</div>
                         <p className="text-[10px] opacity-60 tracking-[0.1em] max-w-[280px] leading-relaxed italic mx-auto">"{message || "Join us for an evening of celebration and excellence."}"</p>
-                        <div className="w-12 h-[1px] bg-amber-500/40 mx-auto mt-6"></div>
-                        <div className="text-[9px] text-amber-500 font-black tracking-[0.3em] uppercase opacity-80">{phone || "R.S.V.P REQUIRED"}</div>
+                        <div className="w-12 h-[1px] bg-brand-gold/40 mx-auto mt-6"></div>
+                        <div className="text-[9px] text-brand-gold font-black tracking-[0.3em] uppercase opacity-80">{phone || "R.S.V.P REQUIRED"}</div>
                     </div>
                 </div>
             </div>
@@ -96,14 +97,14 @@ const AnnouncementTemplate = ({ data }) => {
                 <div className="absolute top-[20%] bottom-[20%] left-[20%] right-[20%] bg-black z-0"></div>
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full px-14 text-center">
-                    <div className="mb-10 bg-black p-5 border border-amber-500/20 rounded-full shadow-2xl">
-                        <div className="text-amber-400 font-cursive text-3xl" style={{ fontFamily: "'Great Vibes', cursive" }}>
+                    <div className="mb-10 bg-black p-5 border border-brand-gold/20 rounded-full shadow-2xl">
+                        <div className="text-brand-gold font-cursive text-3xl" style={{ fontFamily: "'Great Vibes', cursive" }}>
                             {subtitle || "Ray's Bistro"}
                         </div>
                     </div>
 
                     <div className="relative">
-                        <h1 className="text-9xl font-black text-amber-500 italic leading-none mb-1 transform scale-y-125" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        <h1 className="text-9xl font-black text-brand-gold italic leading-none mb-1 transform scale-y-125" style={{ fontFamily: "'Playfair Display', serif" }}>
                             {title?.split(' ')[0] || "Grand"}
                         </h1>
                         <h2 className="text-4xl font-black tracking-[0.5em] text-white uppercase mb-12">Opening</h2>
@@ -111,12 +112,12 @@ const AnnouncementTemplate = ({ data }) => {
 
                     <div className="flex gap-14 mb-14 bg-black p-6 border border-white/5 shadow-2xl">
                         <div className="text-center">
-                            <span className="block text-[9px] font-black uppercase tracking-widest text-amber-500 mb-2">DATE:</span>
+                            <span className="block text-[9px] font-black uppercase tracking-widest text-brand-gold mb-2">DATE:</span>
                             <span className="text-3xl font-black tracking-tighter">{date || "31st"}</span>
                         </div>
                         <div className="w-[1px] h-12 bg-white/20"></div>
                         <div className="text-center">
-                            <span className="block text-[9px] font-black uppercase tracking-widest text-amber-500 mb-2">TIME:</span>
+                            <span className="block text-[9px] font-black uppercase tracking-widest text-brand-gold mb-2">TIME:</span>
                             <span className="text-3xl font-black tracking-tighter">{time || "4pm"}</span>
                         </div>
                     </div>
@@ -139,7 +140,7 @@ const AnnouncementTemplate = ({ data }) => {
             <ImenaBranding />
             <div className="absolute inset-0 bg-white/5 backdrop-blur-[1px]"></div>
             <div className="relative z-10 border border-white/10 p-12 bg-black/80">
-                <div className="w-12 h-1 bg-amber-500 mb-8 mx-auto"></div>
+                <div className="w-12 h-1 bg-brand-gold mb-8 mx-auto"></div>
                 <h1 className="text-3xl font-black tracking-[0.4em] uppercase mb-6">{title || "Notice"}</h1>
                 <p className="text-sm font-medium tracking-[0.2em] text-white/60 mb-10 max-w-xs">{message || "You are cordially invited."}</p>
                 <div className="text-[10px] font-black uppercase tracking-[0.3em] border-t border-white/10 pt-8">

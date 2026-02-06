@@ -7,6 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        brand: {
+          blue: '#2563EB',
+          gold: '#F59E0B',
+          'blue-deep': '#1E40AF',
+          'gold-light': '#FCD34D',
+        },
         gold: {
           200: '#fde68a',
           300: '#fcd34d',
@@ -24,4 +30,5 @@ export default {
     },
   },
   plugins: [],
+  darkMode: 'class',
 }

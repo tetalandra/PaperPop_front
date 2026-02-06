@@ -1,4 +1,5 @@
 import React from 'react';
+import brandLogo from '@/assets/brand-logo.png';
 import { User, Star } from 'lucide-react';
 
 const BirthdayTemplate = ({ data }) => {
@@ -11,9 +12,9 @@ const BirthdayTemplate = ({ data }) => {
     } : {};
 
     const ImenaBranding = () => (
-        <div className="absolute bottom-4 right-4 z-[60] flex items-center gap-2 opacity-30 select-none pointer-events-none grayscale">
-            <img src="/imena-logo.svg" alt="Imena" className="h-6 w-auto" />
-            <span className="text-[8px] font-bold text-neutral-500 uppercase tracking-[0.2em]">Designed by Imena</span>
+        <div className="absolute bottom-6 right-6 z-[60] flex items-center gap-3 opacity-80 select-none pointer-events-none hover:opacity-100 transition-opacity">
+            <img src={brandLogo.src || brandLogo} alt="Imena" className="h-8 w-auto drop-shadow-lg" />
+            <span className="text-[9px] font-bold text-white/60 uppercase tracking-[0.2em]">Designed by Imena</span>
         </div>
     );
 
@@ -28,30 +29,30 @@ const BirthdayTemplate = ({ data }) => {
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full px-12 text-center">
                     <div className="mb-2 mt-12 opacity-80">
-                        <span className="text-[9px] font-black tracking-[0.4em] text-amber-500 uppercase">You are invited to the</span>
+                        <span className="text-[9px] font-black tracking-[0.4em] text-brand-gold uppercase">You are invited to the</span>
                     </div>
 
-                    <h1 className="text-8xl font-cursive text-amber-400 mb-0 leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]" style={{ fontFamily: "'Great Vibes', cursive" }}>
+                    <h1 className="text-8xl font-cursive text-brand-gold mb-0 leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]" style={{ fontFamily: "'Great Vibes', cursive" }}>
                         {subtitle || "Birthday"}
                     </h1>
-                    <h2 className="text-4xl font-black tracking-[0.6em] text-amber-500 uppercase mb-10 drop-shadow-lg">
+                    <h2 className="text-4xl font-black tracking-[0.6em] text-brand-gold uppercase mb-10 drop-shadow-lg">
                         {title || 'PARTY'}
                     </h2>
 
-                    <div className="flex flex-col items-center mb-10 py-6 border-y border-amber-500/20 w-full max-w-[280px]">
-                        <div className="text-lg font-black tracking-[0.3em] text-amber-400 mb-2 uppercase">MARCH</div>
+                    <div className="flex flex-col items-center mb-10 py-6 border-y border-brand-gold/20 w-full max-w-[280px]">
+                        <div className="text-lg font-black tracking-[0.3em] text-brand-gold mb-2 uppercase">MARCH</div>
                         <div className="flex items-center gap-5">
                             <span className="text-[10px] font-black text-neutral-400 uppercase tracking-widest">SUNDAY</span>
-                            <div className="w-1.5 h-1.5 bg-amber-500 rotate-45"></div>
+                            <div className="w-1.5 h-1.5 bg-brand-gold rotate-45"></div>
                             <span className="text-6xl font-black text-white">{date?.split(' ')[1] || "16"}</span>
-                            <div className="w-1.5 h-1.5 bg-amber-500 rotate-45"></div>
+                            <div className="w-1.5 h-1.5 bg-brand-gold rotate-45"></div>
                             <span className="text-[10px] font-black text-neutral-400 uppercase tracking-widest">{time || "5 PM"}</span>
                         </div>
-                        <div className="text-lg font-black tracking-[0.3em] mt-2 text-amber-400 uppercase">2024</div>
+                        <div className="text-lg font-black tracking-[0.3em] mt-2 text-brand-gold uppercase">2024</div>
                     </div>
 
                     <div className="space-y-3 mt-4">
-                        <div className="text-amber-500 font-black tracking-[0.2em] text-xs uppercase">{phone || "+123-456-7890"}</div>
+                        <div className="text-brand-gold font-black tracking-[0.2em] text-xs uppercase">{phone || "+123-456-7890"}</div>
                         <div className="text-neutral-400 text-[9px] font-bold tracking-[0.15em] uppercase max-w-[260px] leading-relaxed border-t border-white/10 pt-3">
                             {location || "123 Anywhere St., Any City"}
                         </div>
@@ -126,7 +127,7 @@ const BirthdayTemplate = ({ data }) => {
                 <div className="absolute inset-[15%] bg-black/90 z-0 shadow-[0_0_80px_60px_rgba(0,0,0,0.9)]"></div>
 
                 <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-14">
-                    <h2 className="text-amber-500 font-black tracking-[0.5em] uppercase text-[10px] mb-4 opacity-80">
+                    <h2 className="text-brand-blue font-black tracking-[0.5em] uppercase text-[10px] mb-4 opacity-80">
                         {title || "HAPPY"}
                     </h2>
                     <h1 className="text-8xl font-serif italic text-white leading-none mb-8 drop-shadow-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -138,14 +139,14 @@ const BirthdayTemplate = ({ data }) => {
                     </div>
 
                     <div className="flex flex-col items-center gap-6 w-full max-w-[200px]">
-                        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"></div>
+                        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-brand-blue/40 to-transparent"></div>
                         <div className="space-y-2">
-                            <div className="text-amber-400 font-black tracking-[0.3em] text-sm uppercase">{date || "MARCH 16"}</div>
+                            <div className="text-brand-blue font-black tracking-[0.3em] text-sm uppercase">{date || "MARCH 16"}</div>
                             <div className="text-[9px] font-bold tracking-[0.2em] uppercase text-white/40">
-                                {time || "5:00 PM"} <span className="mx-2 text-amber-500 opacity-50">•</span> {location || "YOUR PLACE"}
+                                {time || "5:00 PM"} <span className="mx-2 text-brand-gold opacity-50">•</span> {location || "YOUR PLACE"}
                             </div>
                         </div>
-                        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"></div>
+                        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-brand-blue/40 to-transparent"></div>
                     </div>
                 </div>
             </div>
@@ -157,8 +158,8 @@ const BirthdayTemplate = ({ data }) => {
         <div className="relative w-full h-full bg-neutral-900 text-white flex flex-col items-center justify-center p-12 text-center" style={backgroundStyle}>
             <ImenaBranding />
             <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
-            <div className="relative z-10 border-2 border-amber-500/20 p-10 bg-black/60 rounded-3xl">
-                <h1 className="text-4xl font-serif italic mb-4 text-amber-500">{subtitle || "Birthday"}</h1>
+            <div className="relative z-10 border-2 border-brand-blue/20 p-10 bg-black/60 rounded-3xl">
+                <h1 className="text-4xl font-serif italic mb-4 text-brand-gold">{subtitle || "Birthday"}</h1>
                 <h2 className="text-xl font-bold tracking-[0.3em] uppercase mb-8">{title || "Invitation"}</h2>
                 <div className="space-y-4 opacity-70">
                     <p className="text-sm tracking-widest uppercase">{date} • {time}</p>

@@ -57,29 +57,50 @@ const LandingPage = ({ onGetStarted, user, onLogin })=>{
         }
     }["LandingPage.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen bg-[#030303] text-white overflow-x-hidden font-sans selection:bg-amber-500/30 selection:text-amber-200",
+        className: "min-h-screen bg-[#02040a] text-white overflow-x-hidden font-sans selection:bg-brand-blue/30 selection:text-brand-blue",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fixed inset-0 z-0 pointer-events-none",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[120%] h-[120%] bg-[radial-gradient(circle_at_50%_50%,rgba(217,119,6,0.07)_0%,transparent_60%)]"
+                        className: "absolute top-0 left-1/4 w-[60%] h-[60%] bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.08)_0%,transparent_70%)] blur-[100px]"
                     }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
                         lineNumber: 45,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"
+                        className: "absolute bottom-0 right-1/4 w-[60%] h-[60%] bg-[radial-gradient(circle_at_50%_100%,rgba(245,158,11,0.05)_0%,transparent_70%)] blur-[100px]"
                     }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 48,
+                        lineNumber: 46,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.03)_0%,transparent_50%)]"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/LandingPage.jsx",
+                        lineNumber: 49,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/LandingPage.jsx",
+                        lineNumber: 52,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-gold/10 to-transparent"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/LandingPage.jsx",
+                        lineNumber: 53,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0",
                         children: particles.map((p)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute bg-amber-400/20 rounded-full animate-float",
+                                className: `absolute rounded-full animate-float ${p.id % 2 === 0 ? 'bg-brand-blue/30' : 'bg-brand-gold/30'}`,
                                 style: {
                                     width: p.width,
                                     height: p.height,
@@ -91,19 +112,19 @@ const LandingPage = ({ onGetStarted, user, onLogin })=>{
                                 }
                             }, p.id, false, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 53,
+                                lineNumber: 58,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 51,
+                        lineNumber: 56,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"
+                        className: "absolute inset-0 opacity-[0.02] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"
                     }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 70,
+                        lineNumber: 75,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -113,94 +134,96 @@ const LandingPage = ({ onGetStarted, user, onLogin })=>{
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-                className: "fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-xl bg-black/40 border-b border-white/5",
+                className: "fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-2xl bg-[#02040a]/60 border-b border-white/5",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-4 group cursor-pointer",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center transform group-hover:rotate-[15deg] transition-all duration-500 shadow-[0_0_25px_rgba(234,179,8,0.3)]",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$crown$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Crown$3e$__["Crown"], {
-                                    className: "w-5 h-5 text-black"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/LandingPage.jsx",
-                                    lineNumber: 77,
-                                    columnNumber: 25
-                                }, ("TURBOPACK compile-time value", void 0))
-                            }, void 0, false, {
+                                className: "relative w-11 h-11 bg-gradient-to-br from-brand-blue to-brand-blue-deep rounded-xl flex items-center justify-center transform group-hover:rotate-[15deg] transition-all duration-700 shadow-[0_0_30px_rgba(37,99,235,0.3)]",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$crown$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Crown$3e$__["Crown"], {
+                                        className: "w-5 h-5 text-white"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/LandingPage.jsx",
+                                        lineNumber: 82,
+                                        columnNumber: 25
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute -inset-1 bg-brand-gold/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/LandingPage.jsx",
+                                        lineNumber: 83,
+                                        columnNumber: 25
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 76,
+                                lineNumber: 81,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-col",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-xl font-serif italic tracking-tighter leading-none",
+                                        className: "text-2xl font-serif italic tracking-tighter leading-none text-white",
                                         children: "PaperPop"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 80,
+                                        lineNumber: 86,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-[7px] font-black uppercase tracking-[0.4em] text-amber-500/60 mt-0.5",
-                                        children: "Studio Studio"
+                                        className: "text-[7px] font-black uppercase tracking-[0.5em] text-brand-gold/80 mt-1",
+                                        children: "Imena Studio"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 81,
+                                        lineNumber: 87,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 79,
+                                lineNumber: 85,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 75,
+                        lineNumber: 80,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden md:flex items-center gap-12",
+                        className: "hidden md:flex items-center gap-14",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            'Templates',
+                            'Collections',
+                            'Pricing'
+                        ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                 href: "#",
-                                className: "text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 hover:text-white transition-all",
-                                children: "Templates"
-                            }, void 0, false, {
+                                className: "text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 hover:text-brand-blue transition-all duration-300 relative group",
+                                children: [
+                                    item,
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "absolute -bottom-2 left-0 w-0 h-[1px] bg-brand-blue transition-all duration-300 group-hover:w-full"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/LandingPage.jsx",
+                                        lineNumber: 95,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, item, true, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 86,
-                                columnNumber: 21
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "#",
-                                className: "text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 hover:text-white transition-all",
-                                children: "Collections"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 87,
-                                columnNumber: 21
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "#",
-                                className: "text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 hover:text-white transition-all",
-                                children: "Pricing"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 88,
-                                columnNumber: 21
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
+                                lineNumber: 93,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)))
+                    }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 85,
+                        lineNumber: 91,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-6",
+                        className: "flex items-center gap-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: onLogin,
@@ -208,28 +231,28 @@ const LandingPage = ({ onGetStarted, user, onLogin })=>{
                                 children: "Log In"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 92,
+                                lineNumber: 101,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: onGetStarted,
-                                className: "px-7 py-3 rounded-full bg-white text-black text-[10px] font-black uppercase tracking-[0.2em] hover:bg-amber-500 transition-all duration-500 active:scale-95 shadow-xl",
+                                className: "px-8 py-3.5 rounded-full bg-white text-black text-[10px] font-black uppercase tracking-[0.25em] hover:bg-brand-blue hover:text-white transition-all duration-700 active:scale-95 shadow-[0_15px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(37,99,235,0.4)]",
                                 children: "Start Designing"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 93,
+                                lineNumber: 102,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 91,
+                        lineNumber: 100,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/LandingPage.jsx",
-                lineNumber: 74,
+                lineNumber: 79,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -237,396 +260,440 @@ const LandingPage = ({ onGetStarted, user, onLogin })=>{
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         ref: containerRef,
-                        className: "max-w-6xl w-full flex flex-col items-center text-center transition-transform duration-500 ease-out",
+                        className: "max-w-7xl w-full flex flex-col items-center text-center transition-transform duration-700 ease-out",
                         style: {
                             transform: 'translate(var(--mouse-x, 0px), var(--mouse-y, 0px))'
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "inline-flex items-center gap-3 px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-3xl mb-14 animate-fade-in shadow-2xl",
+                                className: "inline-flex items-center gap-4 px-6 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-3xl mb-16 animate-fade-in shadow-2xl",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"
+                                        className: "w-2 h-2 rounded-full bg-brand-blue animate-pulse glow-blue"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 112,
+                                        lineNumber: 121,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-[9px] font-black text-white tracking-[0.4em] uppercase",
+                                        className: "text-[9px] font-black text-white/80 tracking-[0.5em] uppercase",
                                         children: "Private Creative Studio"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 113,
+                                        lineNumber: 122,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 111,
+                                lineNumber: 120,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative mb-8 group animate-scale-up",
+                                className: "relative mb-12 group animate-scale-up",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "absolute -inset-14 bg-amber-500/15 rounded-full blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"
+                                        className: "absolute -inset-20 bg-brand-blue/20 rounded-full blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 118,
+                                        lineNumber: 127,
+                                        columnNumber: 25
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute -inset-10 bg-brand-gold/10 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-[2s] delay-300"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/LandingPage.jsx",
+                                        lineNumber: 128,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                         src: "/imena-logo.svg",
                                         alt: "Imena",
-                                        className: "h-36 md:h-52 object-contain filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)] relative z-10"
+                                        className: "h-40 md:h-60 object-contain filter drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)] relative z-10 transition-transform duration-1000 group-hover:scale-105"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 119,
+                                        lineNumber: 129,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 117,
+                                lineNumber: 126,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-                                className: "mb-10 animate-fade-in-up",
+                                className: "mb-14 animate-fade-in-up",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                        className: "relative font-serif text-7xl md:text-[9rem] tracking-tighter leading-[0.85] mb-6",
+                                        className: "relative font-serif text-7xl md:text-[10rem] tracking-tighter leading-[0.8] mb-8",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "block text-white opacity-90 italic",
-                                                children: "Digital"
+                                                className: "block text-white/90 italic mb-2",
+                                                children: "Artisan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 129,
+                                                lineNumber: 139,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "block font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-400 to-amber-700 drop-shadow-[0_0_20px_rgba(234,179,8,0.25)]",
+                                                className: "block font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-blue to-brand-blue-deep drop-shadow-[0_0_30px_rgba(37,99,235,0.3)]",
                                                 children: "Stationery."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 130,
+                                                lineNumber: 140,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 128,
+                                        lineNumber: 138,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "max-w-2xl mx-auto text-neutral-500 text-xs md:text-sm font-bold uppercase tracking-[0.4em] leading-relaxed",
+                                        className: "max-w-3xl mx-auto text-neutral-500 text-xs md:text-sm font-bold uppercase tracking-[0.5em] leading-relaxed",
                                         children: [
                                             "Crafting elite family invitations ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 135,
+                                                lineNumber: 145,
                                                 columnNumber: 63
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-white/80",
-                                                children: "for the most significant occasions."
+                                                className: "text-white/70 italic lowercase font-serif normal-case tracking-normal text-xl mt-4 block",
+                                                children: "for the most significant occasions of your life."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 136,
+                                                lineNumber: 146,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 134,
+                                        lineNumber: 144,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 127,
+                                lineNumber: 137,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col md:flex-row items-center gap-10 mt-12 animate-fade-in-up animation-delay-300",
+                                className: "flex flex-col md:flex-row items-center gap-12 mt-16 animate-fade-in-up animation-delay-300",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: onGetStarted,
-                                        className: "group relative px-14 py-6 bg-amber-500 rounded-2xl flex items-center gap-4 shadow-[0_25px_50px_-12px_rgba(234,179,8,0.3)] hover:shadow-[0_35px_70px_-12px_rgba(234,179,8,0.5)] transition-all duration-700 hover:-translate-y-2 active:translate-y-0 overflow-hidden",
+                                        className: "group relative px-16 py-7 bg-brand-blue rounded-2xl flex items-center gap-5 shadow-[0_25px_50px_-12px_rgba(37,99,235,0.4)] hover:shadow-[0_40px_80px_-12px_rgba(37,99,235,0.6)] transition-all duration-700 hover:-translate-y-2 active:translate-y-0 overflow-hidden",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
+                                                className: "absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 146,
+                                                lineNumber: 156,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "relative z-10 text-black text-[11px] font-black uppercase tracking-[0.4em]",
+                                                className: "relative z-10 text-white text-[12px] font-black uppercase tracking-[0.4em]",
                                                 children: "Initialize Studio"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 147,
+                                                lineNumber: 157,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                className: "relative z-10 w-4 h-4 text-black group-hover:translate-x-3 transition-transform duration-500"
+                                                className: "relative z-10 w-5 h-5 text-white group-hover:translate-x-3 transition-transform duration-700"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 148,
+                                                lineNumber: 158,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 142,
+                                        lineNumber: 152,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-5 px-6 py-4 bg-white/5 backdrop-blur-2xl rounded-2xl border border-white/5",
+                                        className: "flex items-center gap-6 px-8 py-5 bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 shadow-2xl",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex -space-x-3",
+                                                className: "flex -space-x-4",
                                                 children: [
                                                     10,
                                                     20,
                                                     30
                                                 ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "w-8 h-8 rounded-full border-2 border-black bg-neutral-900 overflow-hidden shadow-lg",
+                                                        className: "w-10 h-10 rounded-full border-2 border-[#02040a] bg-neutral-900 overflow-hidden shadow-xl transform hover:scale-110 hover:z-10 transition-all",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                             src: `https://i.pravatar.cc/100?u=${i}`,
                                                             className: "w-full h-full object-cover grayscale"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LandingPage.jsx",
-                                                            lineNumber: 155,
+                                                            lineNumber: 165,
                                                             columnNumber: 41
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, i, false, {
                                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                                        lineNumber: 154,
+                                                        lineNumber: 164,
                                                         columnNumber: 37
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 152,
+                                                lineNumber: 162,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "h-6 w-[1px] bg-white/10"
+                                                className: "h-8 w-[1px] bg-white/10"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 159,
+                                                lineNumber: 169,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "text-left",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "block text-[9px] font-black text-white/80 uppercase tracking-widest leading-none mb-1",
+                                                        className: "block text-[10px] font-black text-white/90 uppercase tracking-[0.2em] leading-none mb-1.5",
                                                         children: "Trusted By"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                                        lineNumber: 161,
+                                                        lineNumber: 171,
                                                         columnNumber: 33
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "block text-[8px] font-bold text-neutral-600 uppercase tracking-widest leading-none",
+                                                        className: "block text-[9px] font-bold text-brand-blue uppercase tracking-[0.1em] leading-none",
                                                         children: "Global Creators"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                                        lineNumber: 162,
+                                                        lineNumber: 172,
                                                         columnNumber: 33
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 160,
+                                                lineNumber: 170,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 151,
+                                        lineNumber: 161,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 141,
+                                lineNumber: 151,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mt-32 grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-5xl opacity-40 hover:opacity-100 transition-opacity duration-1000 animate-fade-in animation-delay-600",
+                                className: "mt-40 grid grid-cols-1 md:grid-cols-3 gap-24 w-full max-w-6xl opacity-60 hover:opacity-100 transition-all duration-1000 animate-fade-in animation-delay-600",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex flex-col items-center gap-4 group",
+                                        className: "flex flex-col items-center gap-6 group cursor-default",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"], {
-                                                className: "w-6 h-6 text-amber-500 mb-2 group-hover:scale-110 transition-transform"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center border border-brand-blue/20 group-hover:bg-brand-blue/20 group-hover:border-brand-blue/40 transition-all duration-500",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"], {
+                                                    className: "w-7 h-7 text-brand-blue"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/LandingPage.jsx",
+                                                    lineNumber: 181,
+                                                    columnNumber: 33
+                                                }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 170,
+                                                lineNumber: 180,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "text-[10px] font-black uppercase tracking-[0.4em] text-white",
+                                                className: "text-[11px] font-black uppercase tracking-[0.5em] text-white",
                                                 children: "Guaranteed Quality"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 171,
+                                                lineNumber: 183,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 169,
+                                        lineNumber: 179,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex flex-col items-center gap-4 group",
+                                        className: "flex flex-col items-center gap-6 group cursor-default",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
-                                                className: "w-6 h-6 text-amber-500 mb-2 group-hover:scale-110 transition-transform"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center border border-brand-gold/20 group-hover:bg-brand-gold/20 group-hover:border-brand-gold/40 transition-all duration-500",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
+                                                    className: "w-7 h-7 text-brand-gold"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/LandingPage.jsx",
+                                                    lineNumber: 187,
+                                                    columnNumber: 33
+                                                }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 174,
+                                                lineNumber: 186,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "text-[10px] font-black uppercase tracking-[0.4em] text-white",
+                                                className: "text-[11px] font-black uppercase tracking-[0.5em] text-white",
                                                 children: "Instant Generation"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 175,
+                                                lineNumber: 189,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 173,
+                                        lineNumber: 185,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex flex-col items-center gap-4 group",
+                                        className: "flex flex-col items-center gap-6 group cursor-default",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"], {
-                                                className: "w-6 h-6 text-amber-500 mb-2 group-hover:scale-110 transition-transform"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center border border-brand-blue/20 group-hover:bg-brand-blue/20 group-hover:border-brand-blue/40 transition-all duration-500",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"], {
+                                                    className: "w-7 h-7 text-brand-blue"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/LandingPage.jsx",
+                                                    lineNumber: 193,
+                                                    columnNumber: 33
+                                                }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 178,
+                                                lineNumber: 192,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "text-[10px] font-black uppercase tracking-[0.4em] text-white",
+                                                className: "text-[11px] font-black uppercase tracking-[0.5em] text-white",
                                                 children: "Professional PDF"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                                lineNumber: 179,
+                                                lineNumber: 195,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/LandingPage.jsx",
-                                        lineNumber: 177,
+                                        lineNumber: 191,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 168,
+                                lineNumber: 178,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 105,
+                        lineNumber: 114,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-32 pb-16 flex flex-col items-center gap-8 opacity-20",
+                        className: "mt-40 pb-20 flex flex-col items-center gap-10 opacity-30",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "h-24 w-[1px] bg-gradient-to-b from-transparent via-amber-500 to-transparent"
+                                className: "h-28 w-[1px] bg-gradient-to-b from-transparent via-brand-blue to-transparent"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 186,
+                                lineNumber: 202,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-[10px] font-black uppercase tracking-[1em] mr-[-1em]",
-                                children: "Studio"
+                                className: "text-[10px] font-black uppercase tracking-[1.2rem] mr-[-1.2rem] text-brand-blue",
+                                children: "Explore"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LandingPage.jsx",
-                                lineNumber: 187,
+                                lineNumber: 203,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 185,
+                        lineNumber: 201,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/LandingPage.jsx",
-                lineNumber: 103,
+                lineNumber: 112,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed bottom-12 left-12 flex flex-col gap-2 z-50 pointer-events-none opacity-20",
+                className: "fixed bottom-12 left-12 flex flex-col gap-3 z-50 pointer-events-none opacity-40",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-[9px] font-black uppercase tracking-widest",
+                        className: "text-[10px] font-black uppercase tracking-widest text-white",
                         children: "© 2024"
                     }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 193,
+                        lineNumber: 209,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "h-[1px] w-8 bg-white"
+                        className: "h-[1px] w-12 bg-brand-blue"
                     }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 194,
+                        lineNumber: 210,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-[9px] font-black uppercase tracking-[0.3em]",
+                        className: "text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue",
                         children: "Imena Group"
                     }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 195,
+                        lineNumber: 211,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/LandingPage.jsx",
-                lineNumber: 192,
+                lineNumber: 208,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed bottom-12 right-12 flex flex-col items-end gap-2 z-50 pointer-events-none opacity-20",
+                className: "fixed bottom-12 right-12 flex flex-col items-end gap-3 z-50 pointer-events-none opacity-40",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mouse$2d$pointer$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MousePointer2$3e$__["MousePointer2"], {
-                        className: "w-4 h-4 text-amber-500 mb-2"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-[10px] font-black uppercase tracking-[0.5em] text-brand-gold",
+                                children: "Designed for Excellence"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/LandingPage.jsx",
+                                lineNumber: 216,
+                                columnNumber: 21
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mouse$2d$pointer$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MousePointer2$3e$__["MousePointer2"], {
+                                className: "w-4 h-4 text-brand-gold animate-bounce"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/LandingPage.jsx",
+                                lineNumber: 217,
+                                columnNumber: 21
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 199,
+                        lineNumber: 215,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-[9px] font-black uppercase tracking-[0.4em]",
-                        children: "Designed for Excellence"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "h-[1px] w-12 bg-brand-gold"
                     }, void 0, false, {
                         fileName: "[project]/src/components/LandingPage.jsx",
-                        lineNumber: 200,
+                        lineNumber: 219,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/LandingPage.jsx",
-                lineNumber: 198,
+                lineNumber: 214,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
@@ -715,7 +782,7 @@ const BirthdayTemplate = ({ data })=>{
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mb-2 mt-12 opacity-80",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-[9px] font-black tracking-[0.4em] text-amber-500 uppercase",
+                                className: "text-[9px] font-black tracking-[0.4em] text-brand-gold uppercase",
                                 children: "You are invited to the"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -728,7 +795,7 @@ const BirthdayTemplate = ({ data })=>{
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-8xl font-cursive text-amber-400 mb-0 leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]",
+                            className: "text-8xl font-cursive text-brand-gold mb-0 leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]",
                             style: {
                                 fontFamily: "'Great Vibes', cursive"
                             },
@@ -739,7 +806,7 @@ const BirthdayTemplate = ({ data })=>{
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-4xl font-black tracking-[0.6em] text-amber-500 uppercase mb-10 drop-shadow-lg",
+                            className: "text-4xl font-black tracking-[0.6em] text-brand-gold uppercase mb-10 drop-shadow-lg",
                             children: title || 'PARTY'
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -747,10 +814,10 @@ const BirthdayTemplate = ({ data })=>{
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col items-center mb-10 py-6 border-y border-amber-500/20 w-full max-w-[280px]",
+                            className: "flex flex-col items-center mb-10 py-6 border-y border-brand-gold/20 w-full max-w-[280px]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-lg font-black tracking-[0.3em] text-amber-400 mb-2 uppercase",
+                                    className: "text-lg font-black tracking-[0.3em] text-brand-gold mb-2 uppercase",
                                     children: "MARCH"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -769,7 +836,7 @@ const BirthdayTemplate = ({ data })=>{
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-1.5 h-1.5 bg-amber-500 rotate-45"
+                                            className: "w-1.5 h-1.5 bg-brand-gold rotate-45"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
                                             lineNumber: 45,
@@ -784,7 +851,7 @@ const BirthdayTemplate = ({ data })=>{
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-1.5 h-1.5 bg-amber-500 rotate-45"
+                                            className: "w-1.5 h-1.5 bg-brand-gold rotate-45"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
                                             lineNumber: 47,
@@ -805,7 +872,7 @@ const BirthdayTemplate = ({ data })=>{
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-lg font-black tracking-[0.3em] mt-2 text-amber-400 uppercase",
+                                    className: "text-lg font-black tracking-[0.3em] mt-2 text-brand-gold uppercase",
                                     children: "2024"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -822,7 +889,7 @@ const BirthdayTemplate = ({ data })=>{
                             className: "space-y-3 mt-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-amber-500 font-black tracking-[0.2em] text-xs uppercase",
+                                    className: "text-brand-gold font-black tracking-[0.2em] text-xs uppercase",
                                     children: phone || "+123-456-7890"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -1035,7 +1102,7 @@ const BirthdayTemplate = ({ data })=>{
                     className: "relative z-10 h-full flex flex-col items-center justify-center text-center p-14",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-amber-500 font-black tracking-[0.5em] uppercase text-[10px] mb-4 opacity-80",
+                            className: "text-brand-blue font-black tracking-[0.5em] uppercase text-[10px] mb-4 opacity-80",
                             children: title || "HAPPY"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -1076,7 +1143,7 @@ const BirthdayTemplate = ({ data })=>{
                             className: "flex flex-col items-center gap-6 w-full max-w-[200px]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"
+                                    className: "w-full h-[1px] bg-gradient-to-r from-transparent via-brand-blue/40 to-transparent"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
                                     lineNumber: 141,
@@ -1086,7 +1153,7 @@ const BirthdayTemplate = ({ data })=>{
                                     className: "space-y-2",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-amber-400 font-black tracking-[0.3em] text-sm uppercase",
+                                            className: "text-brand-blue font-black tracking-[0.3em] text-sm uppercase",
                                             children: date || "MARCH 16"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -1099,7 +1166,7 @@ const BirthdayTemplate = ({ data })=>{
                                                 time || "5:00 PM",
                                                 " ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "mx-2 text-amber-500 opacity-50",
+                                                    className: "mx-2 text-brand-gold opacity-50",
                                                     children: "•"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -1121,7 +1188,7 @@ const BirthdayTemplate = ({ data })=>{
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"
+                                    className: "w-full h-[1px] bg-gradient-to-r from-transparent via-brand-blue/40 to-transparent"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
                                     lineNumber: 148,
@@ -1164,10 +1231,10 @@ const BirthdayTemplate = ({ data })=>{
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative z-10 border-2 border-amber-500/20 p-10 bg-black/60 rounded-3xl",
+                className: "relative z-10 border-2 border-brand-blue/20 p-10 bg-black/60 rounded-3xl",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-4xl font-serif italic mb-4 text-amber-500",
+                        className: "text-4xl font-serif italic mb-4 text-brand-gold",
                         children: subtitle || "Birthday"
                     }, void 0, false, {
                         fileName: "[project]/src/components/templates/BirthdayTemplate.jsx",
@@ -1418,9 +1485,9 @@ const AssemblyTemplate = ({ data })=>{
                     className: "relative z-10 w-full flex flex-col items-center text-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-6 bg-emerald-500/10 px-6 py-1 rounded-full border border-emerald-500/20",
+                            className: "mb-6 bg-brand-gold/10 px-6 py-1 rounded-full border border-brand-gold/20",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-[10px] font-black tracking-[0.5em] text-emerald-400 uppercase",
+                                className: "text-[10px] font-black tracking-[0.5em] text-brand-gold uppercase",
                                 children: "Weekly Assembly"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1444,7 +1511,7 @@ const AssemblyTemplate = ({ data })=>{
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-2xl font-bold tracking-[0.3em] text-emerald-500 uppercase mb-8",
+                            className: "text-2xl font-bold tracking-[0.3em] text-brand-gold uppercase mb-8",
                             children: "Session"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1455,7 +1522,7 @@ const AssemblyTemplate = ({ data })=>{
                             className: "w-full max-w-sm mb-10 bg-black/40 backdrop-blur-sm p-8 rounded-3xl border border-white/5 shadow-2xl",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-emerald-400 font-bold text-xl mb-4 italic",
+                                    className: "text-brand-gold font-bold text-xl mb-4 italic",
                                     children: title || "Mid-Week Briefing"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1476,7 +1543,7 @@ const AssemblyTemplate = ({ data })=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "block text-[8px] text-emerald-500 mb-1 font-black uppercase tracking-widest",
+                                                    className: "block text-[8px] text-brand-gold mb-1 font-black uppercase tracking-widest",
                                                     children: "Time"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1500,7 +1567,7 @@ const AssemblyTemplate = ({ data })=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "block text-[8px] text-emerald-500 mb-1 font-black uppercase tracking-widest",
+                                                    className: "block text-[8px] text-brand-gold mb-1 font-black uppercase tracking-widest",
                                                     children: "Room"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1559,7 +1626,7 @@ const AssemblyTemplate = ({ data })=>{
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#3b82f6_0,transparent_50%)]"
+                        className: "absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#2563EB_0,transparent_50%)]"
                     }, void 0, false, {
                         fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
                         lineNumber: 93,
@@ -1574,9 +1641,9 @@ const AssemblyTemplate = ({ data })=>{
                     className: "relative z-10 w-full flex flex-col items-center text-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-6 bg-blue-500/10 px-6 py-1 rounded-full border border-blue-500/20",
+                            className: "mb-6 bg-brand-blue/10 px-6 py-1 rounded-full border border-brand-blue/20",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-[10px] font-black tracking-[0.5em] text-blue-400 uppercase",
+                                className: "text-[10px] font-black tracking-[0.5em] text-brand-blue uppercase",
                                 children: "Weekend Forum"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1600,7 +1667,7 @@ const AssemblyTemplate = ({ data })=>{
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-2xl font-bold tracking-[0.3em] text-blue-500 uppercase mb-8",
+                            className: "text-2xl font-bold tracking-[0.3em] text-brand-blue uppercase mb-8",
                             children: "Session"
                         }, void 0, false, {
                             fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1611,7 +1678,7 @@ const AssemblyTemplate = ({ data })=>{
                             className: "w-full max-w-sm mb-10 bg-black/40 backdrop-blur-sm p-8 rounded-3xl border border-white/5 shadow-2xl",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-blue-400 font-bold text-xl mb-4 italic",
+                                    className: "text-brand-blue font-bold text-xl mb-4 italic",
                                     children: title || "Visionary Workshop"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1632,7 +1699,7 @@ const AssemblyTemplate = ({ data })=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "block text-[8px] text-blue-500 mb-1 font-black uppercase tracking-widest",
+                                                    className: "block text-[8px] text-brand-blue mb-1 font-black uppercase tracking-widest",
                                                     children: "Time"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1656,7 +1723,7 @@ const AssemblyTemplate = ({ data })=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "block text-[8px] text-blue-500 mb-1 font-black uppercase tracking-widest",
+                                                    className: "block text-[8px] text-brand-blue mb-1 font-black uppercase tracking-widest",
                                                     children: "Hall"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/templates/AssemblyTemplate.jsx",
@@ -1832,14 +1899,14 @@ const AchievementTemplate = ({ data })=>{
                 className: "relative z-10 w-full flex flex-col items-center text-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-16 h-1 bg-gold-500 mb-8"
+                        className: "w-16 h-1 bg-brand-gold mb-8"
                     }, void 0, false, {
                         fileName: "[project]/src/components/templates/AchievementTemplate.jsx",
                         lineNumber: 25,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-gold-500 uppercase tracking-[0.4em] text-xs font-bold mb-4",
+                        className: "text-brand-gold uppercase tracking-[0.4em] text-xs font-bold mb-4",
                         style: {
                             fontFamily: "'Plus Jakarta Sans', sans-serif"
                         },
@@ -1879,7 +1946,7 @@ const AchievementTemplate = ({ data })=>{
                                 className: "text-center",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "block text-gold-500 mb-1",
+                                        className: "block text-brand-gold mb-1",
                                         children: "Date"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/templates/AchievementTemplate.jsx",
@@ -1897,7 +1964,7 @@ const AchievementTemplate = ({ data })=>{
                                 className: "text-center",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "block text-gold-500 mb-1",
+                                        className: "block text-brand-gold mb-1",
                                         children: "Authority"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/templates/AchievementTemplate.jsx",
@@ -2004,9 +2071,9 @@ const AnnouncementTemplate = ({ data })=>{
                     className: "relative z-10 flex flex-col items-center justify-center h-full px-16 text-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-4 mt-12 bg-black/80 px-4 py-2 border border-amber-500/20 inline-block",
+                            className: "mb-4 mt-12 bg-black/80 px-4 py-2 border border-brand-gold/20 inline-block",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-[10px] font-black tracking-[0.5em] text-amber-500 uppercase",
+                                className: "text-[10px] font-black tracking-[0.5em] text-brand-gold uppercase",
                                 children: subtitle || "COMPANY NAME"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/templates/AnnouncementTemplate.jsx",
@@ -2049,7 +2116,7 @@ const AnnouncementTemplate = ({ data })=>{
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-6xl font-serif text-amber-500 leading-none",
+                                    className: "text-6xl font-serif text-brand-gold leading-none",
                                     style: {
                                         fontFamily: "'Playfair Display', serif"
                                     },
@@ -2097,14 +2164,14 @@ const AnnouncementTemplate = ({ data })=>{
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-12 h-[1px] bg-amber-500/40 mx-auto mt-6"
+                                    className: "w-12 h-[1px] bg-brand-gold/40 mx-auto mt-6"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/AnnouncementTemplate.jsx",
                                     lineNumber: 47,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-[9px] text-amber-500 font-black tracking-[0.3em] uppercase opacity-80",
+                                    className: "text-[9px] text-brand-gold font-black tracking-[0.3em] uppercase opacity-80",
                                     children: phone || "R.S.V.P REQUIRED"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/templates/AnnouncementTemplate.jsx",
@@ -2242,9 +2309,9 @@ const AnnouncementTemplate = ({ data })=>{
                     className: "relative z-10 flex flex-col items-center justify-center h-full px-14 text-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-10 bg-black p-5 border border-amber-500/20 rounded-full shadow-2xl",
+                            className: "mb-10 bg-black p-5 border border-brand-gold/20 rounded-full shadow-2xl",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-amber-400 font-cursive text-3xl",
+                                className: "text-brand-gold font-cursive text-3xl",
                                 style: {
                                     fontFamily: "'Great Vibes', cursive"
                                 },
@@ -2263,7 +2330,7 @@ const AnnouncementTemplate = ({ data })=>{
                             className: "relative",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                    className: "text-9xl font-black text-amber-500 italic leading-none mb-1 transform scale-y-125",
+                                    className: "text-9xl font-black text-brand-gold italic leading-none mb-1 transform scale-y-125",
                                     style: {
                                         fontFamily: "'Playfair Display', serif"
                                     },
@@ -2294,7 +2361,7 @@ const AnnouncementTemplate = ({ data })=>{
                                     className: "text-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "block text-[9px] font-black uppercase tracking-widest text-amber-500 mb-2",
+                                            className: "block text-[9px] font-black uppercase tracking-widest text-brand-gold mb-2",
                                             children: "DATE:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/AnnouncementTemplate.jsx",
@@ -2326,7 +2393,7 @@ const AnnouncementTemplate = ({ data })=>{
                                     className: "text-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "block text-[9px] font-black uppercase tracking-widest text-amber-500 mb-2",
+                                            className: "block text-[9px] font-black uppercase tracking-widest text-brand-gold mb-2",
                                             children: "TIME:"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/templates/AnnouncementTemplate.jsx",
@@ -2403,7 +2470,7 @@ const AnnouncementTemplate = ({ data })=>{
                 className: "relative z-10 border border-white/10 p-12 bg-black/80",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-12 h-1 bg-amber-500 mb-8 mx-auto"
+                        className: "w-12 h-1 bg-brand-gold mb-8 mx-auto"
                     }, void 0, false, {
                         fileName: "[project]/src/components/templates/AnnouncementTemplate.jsx",
                         lineNumber: 142,
@@ -2873,13 +2940,13 @@ const InputGroup = ({ label, name, value, onChange, type = "text", icon: Icon, p
             animationDelay: `${delay}ms`
         },
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: `relative group bg-neutral-900/40 backdrop-blur-xl border rounded-2xl overflow-hidden transition-all duration-500
-                ${isFocused ? 'border-amber-500/50 shadow-[0_20px_40px_rgba(0,0,0,0.6)] bg-neutral-900/80 -translate-y-1' : 'border-white/5 hover:border-white/10'}
+            className: `relative group bg-[#0a0c10]/40 backdrop-blur-xl border rounded-2xl overflow-hidden transition-all duration-500
+                ${isFocused ? 'border-brand-blue/50 shadow-[0_20px_40px_rgba(0,0,0,0.6)] bg-[#0a0c10]/80 -translate-y-1' : 'border-white/5 hover:border-white/10'}
             `,
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                     className: `absolute left-12 transition-all duration-500 pointer-events-none z-10 font-bold tracking-widest
-                    ${isFocused || hasValue ? 'top-3 text-[8px] text-amber-500 uppercase' : 'top-1/2 -translate-y-1/2 text-xs text-neutral-500 uppercase'}
+                    ${isFocused || hasValue ? 'top-3 text-[8px] text-brand-blue uppercase' : 'top-1/2 -translate-y-1/2 text-xs text-neutral-500 uppercase'}
                 `,
                     children: label
                 }, void 0, false, {
@@ -2889,7 +2956,7 @@ const InputGroup = ({ label, name, value, onChange, type = "text", icon: Icon, p
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: `absolute top-0 left-0 h-full w-12 flex items-center justify-center transition-all duration-500
-                    ${isFocused ? 'text-amber-400 scale-110' : 'text-neutral-600'}
+                    ${isFocused ? 'text-brand-blue scale-110' : 'text-neutral-600'}
                 `,
                     children: Icon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
                         className: "w-4 h-4"
@@ -2931,7 +2998,7 @@ const InputGroup = ({ label, name, value, onChange, type = "text", icon: Icon, p
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: `absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent transition-all duration-700 ${isFocused ? 'w-full opacity-100' : 'w-0 opacity-0'}`
+                    className: `absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-brand-blue to-transparent transition-all duration-700 ${isFocused ? 'w-full opacity-100' : 'w-0 opacity-0'}`
                 }, void 0, false, {
                     fileName: "[project]/src/components/EventForm.jsx",
                     lineNumber: 85,
@@ -3043,7 +3110,7 @@ const EventForm = ({ onBack })=>{
                 lineNumber: 175,
                 columnNumber: 52
             }, ("TURBOPACK compile-time value", void 0)),
-            color: 'from-amber-500/20'
+            color: 'from-brand-blue/20'
         },
         {
             id: 'announcement',
@@ -3055,7 +3122,7 @@ const EventForm = ({ onBack })=>{
                 lineNumber: 176,
                 columnNumber: 55
             }, ("TURBOPACK compile-time value", void 0)),
-            color: 'from-blue-500/20'
+            color: 'from-brand-gold/20'
         },
         {
             id: 'achievement',
@@ -3067,7 +3134,7 @@ const EventForm = ({ onBack })=>{
                 lineNumber: 177,
                 columnNumber: 52
             }, ("TURBOPACK compile-time value", void 0)),
-            color: 'from-purple-500/20'
+            color: 'from-brand-blue/20'
         },
         {
             id: 'assembly',
@@ -3079,7 +3146,7 @@ const EventForm = ({ onBack })=>{
                 lineNumber: 178,
                 columnNumber: 52
             }, ("TURBOPACK compile-time value", void 0)),
-            color: 'from-emerald-500/20'
+            color: 'from-brand-gold/20'
         }
     ];
     const predefinedBackgrounds = [
@@ -3265,14 +3332,14 @@ const EventForm = ({ onBack })=>{
                                         className: "flex items-center gap-2",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-2 h-2 rounded-full bg-amber-500 animate-pulse"
+                                                className: "w-2 h-2 rounded-full bg-brand-blue animate-pulse"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/EventForm.jsx",
                                                 lineNumber: 262,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-[10px] font-black text-amber-500 tracking-[0.2em] uppercase",
+                                                className: "text-[10px] font-black text-brand-blue tracking-widest uppercase",
                                                 children: "Live Draft"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/EventForm.jsx",
@@ -3304,7 +3371,7 @@ const EventForm = ({ onBack })=>{
                                                 columnNumber: 36
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "italic text-amber-500",
+                                                className: "italic text-brand-blue",
                                                 children: "Masterpiece"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/EventForm.jsx",
@@ -3346,7 +3413,7 @@ const EventForm = ({ onBack })=>{
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$palette$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Palette$3e$__["Palette"], {
-                                                className: "w-3 h-3 text-amber-500/50"
+                                                className: "w-3 h-3 text-brand-blue/50"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/EventForm.jsx",
                                                 lineNumber: 279,
@@ -3373,10 +3440,10 @@ const EventForm = ({ onBack })=>{
                                                         }));
                                                 },
                                                 className: `relative flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-500 group overflow-hidden border
-                                    ${templateType === t.id ? 'bg-white/5 border-amber-500/50 text-white shadow-xl translate-y-[-2px]' : 'bg-neutral-900/40 border-white/5 text-neutral-500 hover:border-white/10'}`,
+                                    ${templateType === t.id ? 'bg-white/5 border-brand-blue/50 text-white shadow-xl translate-y-[-2px]' : 'bg-[#0a0c10]/40 border-white/5 text-neutral-500 hover:border-white/10'}`,
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: `transition-all duration-500 ${templateType === t.id ? 'text-amber-500 scale-125' : 'text-neutral-600'}`,
+                                                        className: `transition-all duration-500 ${templateType === t.id ? 'text-brand-blue scale-125' : 'text-neutral-600'}`,
                                                         children: t.icon
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/EventForm.jsx",
@@ -3394,7 +3461,7 @@ const EventForm = ({ onBack })=>{
                                                     templateType === t.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute top-0 right-0 p-2",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "w-1.5 h-1.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"
+                                                            className: "w-1.5 h-1.5 rounded-full bg-brand-blue ring-4 ring-brand-blue/20"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/EventForm.jsx",
                                                             lineNumber: 312,
@@ -3437,7 +3504,7 @@ const EventForm = ({ onBack })=>{
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-[9px] text-amber-500 font-bold uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20",
+                                                className: "text-[9px] text-brand-gold font-bold uppercase tracking-widest bg-brand-gold/10 px-2.5 py-1 rounded-full border border-brand-gold/20",
                                                 children: "6 Styles Available"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/EventForm.jsx",
@@ -3455,7 +3522,7 @@ const EventForm = ({ onBack })=>{
                                         children: predefinedBackgrounds.filter((bg)=>bg.category === templateType).map((bg)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 onClick: ()=>selectPredefinedTemplate(bg),
                                                 className: `relative flex-shrink-0 w-32 aspect-[3/4] rounded-2xl overflow-hidden border-2 transition-all duration-500 group snap-start
-                                        ${formData.backgroundImage === bg.img ? 'border-amber-500 shadow-[0_15px_30px_rgba(234,179,8,0.3)] scale-105' : 'border-white/5 hover:border-white/20 scale-100'}`,
+                                        ${formData.backgroundImage === bg.img ? 'border-brand-blue shadow-[0_15px_30px_rgba(37,99,235,0.3)] scale-105' : 'border-white/5 hover:border-white/20 scale-100'}`,
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                         src: bg.img,
@@ -3489,9 +3556,9 @@ const EventForm = ({ onBack })=>{
                                                         columnNumber: 37
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     formData.backgroundImage === bg.img && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "absolute top-2 right-2 w-5 h-5 bg-amber-500 rounded-full flex items-center justify-center shadow-2xl animate-bounce",
+                                                        className: "absolute top-2 right-2 w-5 h-5 bg-brand-blue rounded-full flex items-center justify-center shadow-2xl animate-bounce",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
-                                                            className: "w-2.5 h-2.5 text-black"
+                                                            className: "w-2.5 h-2.5 text-white"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/EventForm.jsx",
                                                             lineNumber: 344,
@@ -3547,7 +3614,7 @@ const EventForm = ({ onBack })=>{
                                                             backgroundType: v.img ? 'image' : prev.backgroundType
                                                         })),
                                                 className: `flex items-center gap-3 px-4 py-3 rounded-2xl border transition-all duration-300
-                                            ${formData.variant === v.id ? 'bg-amber-500/10 border-amber-500 text-amber-500' : 'bg-white/5 border-white/5 text-neutral-500 hover:border-white/10 hover:text-white'}`,
+                                            ${formData.variant === v.id ? 'bg-brand-blue/10 border-brand-blue text-brand-blue' : 'bg-white/5 border-white/5 text-neutral-500 hover:border-white/10 hover:text-white'}`,
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-lg",
@@ -3806,10 +3873,10 @@ const EventForm = ({ onBack })=>{
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                         htmlFor: "file-upload",
-                                                        className: "flex items-center justify-center gap-3 w-full py-4 bg-white/5 hover:bg-white/10 text-white rounded-2xl cursor-pointer transition-all duration-300 border border-white/10 active:scale-[0.98] group-hover:border-amber-500/30",
+                                                        className: "flex items-center justify-center gap-3 w-full py-4 bg-white/5 hover:bg-white/10 text-white rounded-2xl cursor-pointer transition-all duration-300 border border-white/10 active:scale-[0.98] group-hover:border-brand-blue/30",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
-                                                                className: "w-4 h-4 text-amber-500"
+                                                                className: "w-4 h-4 text-brand-blue"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/EventForm.jsx",
                                                                 lineNumber: 437,
@@ -3980,17 +4047,17 @@ const EventForm = ({ onBack })=>{
                                             className: "flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px]",
                                             children: [
                                                 isSaving ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
-                                                    className: "w-4 h-4 animate-spin text-amber-500"
+                                                    className: "w-4 h-4 animate-spin text-brand-blue"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/EventForm.jsx",
                                                     lineNumber: 493,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$save$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Save$3e$__["Save"], {
-                                                    className: "w-4 h-4 text-amber-500"
+                                                    className: "w-4 h-4 text-brand-blue"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/EventForm.jsx",
                                                     lineNumber: 493,
-                                                    columnNumber: 107
+                                                    columnNumber: 108
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 "Save"
                                             ]
@@ -4006,7 +4073,7 @@ const EventForm = ({ onBack })=>{
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: handleDownload,
-                                        className: "flex-[2.5] relative group overflow-hidden rounded-2xl bg-amber-500 text-black font-black py-4 shadow-[0_15px_30px_rgba(234,179,8,0.2)] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(234,179,8,0.4)] hover:-translate-y-1 active:translate-y-0",
+                                        className: "flex-[2.5] relative group overflow-hidden rounded-2xl bg-brand-blue text-white font-black py-4 shadow-[0_15px_30px_rgba(37,99,235,0.2)] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(37,99,235,0.4)] hover:-translate-y-1 active:translate-y-0",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"
@@ -4094,17 +4161,24 @@ const EventForm = ({ onBack })=>{
                         className: "absolute inset-0 z-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-amber-500/5 via-transparent to-transparent opacity-50 blur-[150px]"
+                                className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-brand-blue/10 via-transparent to-transparent opacity-50 blur-[150px]"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/EventForm.jsx",
                                 lineNumber: 521,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute bottom-0 right-0 w-[50%] h-[50%] bg-[radial-gradient(circle_at_100%_100%,rgba(245,158,11,0.05)_0%,transparent_70%)] blur-[100px]"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/EventForm.jsx",
+                                lineNumber: 522,
+                                columnNumber: 21
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/EventForm.jsx",
-                                lineNumber: 523,
+                                lineNumber: 524,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
@@ -4124,20 +4198,20 @@ const EventForm = ({ onBack })=>{
                                         children: "Interactive Preview"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EventForm.jsx",
-                                        lineNumber: 529,
+                                        lineNumber: 530,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "h-20 w-[1px] bg-gradient-to-b from-transparent via-amber-500/50 to-transparent"
+                                        className: "h-20 w-[1px] bg-gradient-to-b from-transparent via-brand-blue/50 to-transparent"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EventForm.jsx",
-                                        lineNumber: 530,
+                                        lineNumber: 531,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/EventForm.jsx",
-                                lineNumber: 528,
+                                lineNumber: 529,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4147,7 +4221,7 @@ const EventForm = ({ onBack })=>{
                                         className: "absolute -inset-10 bg-black/60 blur-[60px] rounded-full opacity-60 group-hover:opacity-80 transition-opacity"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EventForm.jsx",
-                                        lineNumber: 536,
+                                        lineNumber: 537,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4162,20 +4236,20 @@ const EventForm = ({ onBack })=>{
                                                 templateType: templateType
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/EventForm.jsx",
-                                                lineNumber: 540,
+                                                lineNumber: 541,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-30 pointer-events-none mix-blend-overlay"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/EventForm.jsx",
-                                                lineNumber: 546,
+                                                lineNumber: 547,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/EventForm.jsx",
-                                        lineNumber: 539,
+                                        lineNumber: 540,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4184,10 +4258,10 @@ const EventForm = ({ onBack })=>{
                                             className: "flex items-center gap-2 px-4 py-2 bg-black/80 backdrop-blur-xl border border-white/10 rounded-full",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
-                                                    className: "w-3 h-3 text-amber-500"
+                                                    className: "w-3 h-3 text-brand-gold"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/EventForm.jsx",
-                                                    lineNumber: 552,
+                                                    lineNumber: 553,
                                                     columnNumber: 33
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4195,30 +4269,30 @@ const EventForm = ({ onBack })=>{
                                                     children: "Premium Print Quality"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/EventForm.jsx",
-                                                    lineNumber: 553,
+                                                    lineNumber: 554,
                                                     columnNumber: 33
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/EventForm.jsx",
-                                            lineNumber: 551,
+                                            lineNumber: 552,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EventForm.jsx",
-                                        lineNumber: 550,
+                                        lineNumber: 551,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/EventForm.jsx",
-                                lineNumber: 534,
+                                lineNumber: 535,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/EventForm.jsx",
-                        lineNumber: 526,
+                        lineNumber: 527,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4229,20 +4303,20 @@ const EventForm = ({ onBack })=>{
                                 children: "Scroll to Design"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/EventForm.jsx",
-                                lineNumber: 561,
+                                lineNumber: 562,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "w-8 h-[1px] bg-neutral-800"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/EventForm.jsx",
-                                lineNumber: 562,
+                                lineNumber: 563,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/EventForm.jsx",
-                        lineNumber: 560,
+                        lineNumber: 561,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]

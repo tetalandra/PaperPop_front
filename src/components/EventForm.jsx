@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
-    ArrowLeft, Download, Calendar, MapPin, Clock, Type, AlignLeft,
-    Phone, FileText, Sparkles, User, UserCheck, Save, Loader2,
-    ChevronRight, Camera, Palette, Layout, Wand2
+    ChevronRight, Camera, Palette, Layout, Heart,
+    Gift, Bell, BookOpen, Users, Feather, Award as AwardIcon, Image as ImageIcon,
+    CheckCircle, MessageSquare, Star, PartyPopper, Crown, Scissors, Trophy,
+    GraduationCap, Presentation, Flower2, Flame, User, Type, AlignLeft,
+    ArrowLeft, Download, Calendar, MapPin, Clock, Phone, FileText, Save, Loader2
 } from 'lucide-react';
 import InvitationPreview from './InvitationPreview';
 import { downloadPDF } from '../utils/pdfUtils';
@@ -17,7 +19,7 @@ import noticeV7 from '../assets/templates/notice_variant_7.jpg';
 
 const InputGroup = ({
     label, name, value, onChange, type = "text", icon: Icon, placeholder, multiline = false,
-    delay, isFocused, onFocus, onBlur, className
+    delay, isFocused, onFocus, onBlur, className, required = false
 }) => {
     const [hasValue, setHasValue] = useState(false);
 
@@ -31,28 +33,28 @@ const InputGroup = ({
             style={{ animationDelay: `${delay}ms` }}
         >
             <div
-                className={`relative group bg-neutral-900/40 backdrop-blur-xl border rounded-2xl overflow-hidden transition-all duration-500
+                className={`relative group bg-card/40 backdrop-blur-xl border rounded-2xl overflow-hidden transition-all duration-500
                 ${isFocused
-                        ? 'border-amber-500/50 shadow-[0_20px_40px_rgba(0,0,0,0.6)] bg-neutral-900/80 -translate-y-1'
-                        : 'border-white/5 hover:border-white/10'
+                        ? 'border-brand-blue/50 shadow-[0_20px_40px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.6)] bg-card/80 -translate-y-1'
+                        : 'border-foreground/5 hover:border-foreground/10'
                     }
             `}
             >
                 {/* Floating Label */}
                 <label
-                    className={`absolute left-12 transition-all duration-500 pointer-events-none z-10 font-bold tracking-widest
+                    className={`absolute left-12 transition-all duration-500 pointer-events-none z-10 font-semibold tracking-widest
                     ${(isFocused || hasValue)
-                            ? 'top-3 text-[8px] text-amber-500 uppercase'
+                            ? 'top-3 text-[8px] text-brand-blue uppercase'
                             : 'top-1/2 -translate-y-1/2 text-xs text-neutral-500 uppercase'
                         }
                 `}
                 >
-                    {label}
+                    {label} {required && <span className="text-red-500 ml-1 italic group-hover:not-italic transition-all">*</span>}
                 </label>
 
                 {/* Icon */}
                 <div className={`absolute top-0 left-0 h-full w-12 flex items-center justify-center transition-all duration-500
-                    ${isFocused ? 'text-amber-400 scale-110' : 'text-neutral-600'}
+                    ${isFocused ? 'text-brand-blue scale-110' : 'text-neutral-600'}
                 `}>
                     {Icon && <Icon className="w-4 h-4" />}
                 </div>
@@ -65,7 +67,7 @@ const InputGroup = ({
                         onFocus={onFocus}
                         onBlur={onBlur}
                         rows="3"
-                        className="w-full bg-transparent border-none text-white placeholder-transparent focus:ring-0 pt-8 pb-4 pl-12 pr-6 text-sm resize-none custom-scrollbar font-medium"
+                        className="w-full bg-transparent border-none text-foreground placeholder-transparent focus:ring-0 pt-8 pb-4 pl-12 pr-6 text-sm resize-none custom-scrollbar font-medium"
                         placeholder={placeholder}
                     />
                 ) : (
@@ -76,13 +78,13 @@ const InputGroup = ({
                         onChange={onChange}
                         onFocus={onFocus}
                         onBlur={onBlur}
-                        className="w-full bg-transparent border-none text-white placeholder-transparent focus:ring-0 pt-8 pb-4 pl-12 pr-6 text-sm h-[68px] font-medium"
+                        className="w-full bg-transparent border-none text-foreground placeholder-transparent focus:ring-0 pt-8 pb-4 pl-12 pr-6 text-sm h-[68px] font-medium"
                         placeholder={placeholder}
                     />
                 )}
 
                 {/* Focus Accent */}
-                <div className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent transition-all duration-700 ${isFocused ? 'w-full opacity-100' : 'w-0 opacity-0'}`} />
+                <div className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-brand-blue to-transparent transition-all duration-700 ${isFocused ? 'w-full opacity-100' : 'w-0 opacity-0'}`} />
             </div>
         </div>
     );
@@ -93,7 +95,7 @@ const EventForm = ({ onBack }) => {
     const [templateType, setTemplateType] = useState('birthday');
     const [focusedField, setFocusedField] = useState(null);
 
-    const [formData, setFormData] = useState({
+    const initialFormState = {
         title: '',
         subtitle: '',
         date: '',
@@ -104,7 +106,37 @@ const EventForm = ({ onBack }) => {
         variant: 1,
         backgroundType: 'color',
         backgroundImage: null
+    };
+
+    const [formData, setFormData] = useState({
+        // Birthdays
+        'birthday-5': { ...initialFormState, title: 'John Doe', subtitle: 'Birthday Party', date: 'March 16', variant: 5, backgroundType: 'image', backgroundImage: birthdayV5.src || birthdayV5 },
+        'birthday-6': { ...initialFormState, title: 'Modern One', variant: 6, backgroundType: 'image', backgroundImage: birthdayV6.src || birthdayV6 },
+        'birthday-7': { ...initialFormState, title: 'Balloon Day', variant: 7, backgroundType: 'image', backgroundImage: birthdayV7.src || birthdayV7 },
+        // Announcements
+        'announcement-5': { ...initialFormState, title: 'Annual Gala', variant: 5, backgroundType: 'image', backgroundImage: noticeV5.src || noticeV5 },
+        'announcement-6': { ...initialFormState, title: 'Luxury Event', variant: 6, backgroundType: 'image', backgroundImage: noticeV6.src || noticeV6 },
+        'announcement-7': { ...initialFormState, title: 'Grand Opening', variant: 7, backgroundType: 'image', backgroundImage: noticeV7.src || noticeV7 },
+        // Achievement
+        'achievement-0': { ...initialFormState, title: 'Certificate of Excellence', variant: 0, backgroundType: 'color' },
+        'achievement-30': { ...initialFormState, title: 'SOFTWARE ENGINEER', subtitle: 'David Lee', location: 'COMPANY NAME', variant: 30, backgroundType: 'color' },
+        'achievement-31': { ...initialFormState, subtitle: 'JORDAN JONSON', date: 'CLASS OF 2026', variant: 31, backgroundType: 'color' },
+        // Assembly
+        'assembly-1': { ...initialFormState, title: 'Weekly Assembly', variant: 1, backgroundType: 'color' },
+        'assembly-3': { ...initialFormState, variant: 3 },
+        'assembly-4': { ...initialFormState, variant: 4 },
+        // Valentine
+        'valentine-10': { ...initialFormState, title: "Valentine's Dinner", subtitle: 'Deep Velvet Romance', variant: 10 },
+        'valentine-11': { ...initialFormState, title: "Be Mine", subtitle: 'Soft Peony Lace', variant: 11 },
+        // Remembering
+        'remembering-20': { ...initialFormState, title: "In Memory", subtitle: 'Peaceful Lily', variant: 20 },
+        'remembering-21': { ...initialFormState, title: "A Life Honored", subtitle: 'Candle Light', variant: 21 },
     });
+
+    const [currentVariant, setCurrentVariant] = useState(5); // Shared across types but used as key
+
+    const activeKey = `${templateType}-${currentVariant}`;
+    const activeData = formData[activeKey] || { ...initialFormState, variant: currentVariant };
 
     const [templateImages, setTemplateImages] = useState({});
     const [imageFiles, setImageFiles] = useState({});
@@ -112,7 +144,10 @@ const EventForm = ({ onBack }) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        setFormData(prev => ({
+            ...prev,
+            [activeKey]: { ...activeData, [name]: value }
+        }));
     };
 
     const handleImageUpload = (e) => {
@@ -120,7 +155,7 @@ const EventForm = ({ onBack }) => {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                const imageKey = `${templateType}-${formData.variant}`;
+                const imageKey = activeKey;
                 setTemplateImages(prev => ({ ...prev, [imageKey]: reader.result }));
                 setImageFiles(prev => ({ ...prev, [imageKey]: file }));
             };
@@ -129,19 +164,35 @@ const EventForm = ({ onBack }) => {
     };
 
     const selectPredefinedTemplate = (bg) => {
-        setFormData(prev => ({
-            ...prev,
-            backgroundType: 'image',
-            backgroundImage: bg.img,
-            variant: bg.variant
-        }));
+        setCurrentVariant(bg.variant);
+        // Ensure the data exists for this specific premium choice
+        if (!formData[`${templateType}-${bg.variant}`]) {
+            setFormData(prev => ({
+                ...prev,
+                [`${templateType}-${bg.variant}`]: {
+                    ...initialFormState,
+                    variant: bg.variant,
+                    backgroundImage: bg.img,
+                    backgroundType: bg.img ? 'image' : 'color'
+                }
+            }));
+        }
     };
 
     const handleSave = async () => {
         setIsSaving(true);
+        const { requiredFields } = getFieldConfig();
+        const missingFields = requiredFields.filter(f => !activeData[f]);
+
+        if (missingFields.length > 0) {
+            alert(`Please complete the required fields: ${missingFields.join(', ')}`);
+            setIsSaving(false);
+            return;
+        }
+
         try {
-            let imageUrl = formData.backgroundImage;
-            const imageKey = `${templateType}-${formData.variant}`;
+            let imageUrl = activeData.backgroundImage;
+            const imageKey = `${templateType}-${activeData.variant}`;
             const file = imageFiles[imageKey];
 
             if (file) {
@@ -150,7 +201,7 @@ const EventForm = ({ onBack }) => {
             }
 
             await createInvitation({
-                ...formData,
+                ...activeData,
                 templateType,
                 imageUrl: imageUrl
             });
@@ -168,14 +219,16 @@ const EventForm = ({ onBack }) => {
     const handleBlur = () => setFocusedField(null);
 
     const handleDownload = () => {
-        downloadPDF('invitation-card', `PaperPop-${formData.title || 'Invitation'}.pdf`);
+        downloadPDF('invitation-card', `PaperPop-${activeData.title || 'Invitation'}.pdf`);
     };
 
     const templates = [
-        { id: 'birthday', label: 'Birthday', icon: <Camera className="w-4 h-4" />, color: 'from-amber-500/20' },
-        { id: 'announcement', label: 'Notices', icon: <FileText className="w-4 h-4" />, color: 'from-blue-500/20' },
-        { id: 'achievement', label: 'Award', icon: <Layout className="w-4 h-4" />, color: 'from-purple-500/20' },
-        { id: 'assembly', label: 'Assembly', icon: <UserCheck className="w-4 h-4" />, color: 'from-emerald-500/20' },
+        { id: 'birthday', label: 'Birthday', icon: <Gift className="w-4 h-4" />, color: 'from-brand-blue/20' },
+        { id: 'announcement', label: 'Notices', icon: <Bell className="w-4 h-4" />, color: 'from-brand-gold/20' },
+        { id: 'achievement', label: 'Award', icon: <AwardIcon className="w-4 h-4" />, color: 'from-brand-blue/20' },
+        { id: 'assembly', label: 'Assembly', icon: <Users className="w-4 h-4" />, color: 'from-brand-gold/20' },
+        { id: 'valentine', label: 'Valentine', icon: <Heart className="w-4 h-4" />, color: 'from-red-500/20' },
+        { id: 'remembering', label: 'Remembering', icon: <Feather className="w-4 h-4" />, color: 'from-neutral-500/20' },
     ];
 
     const predefinedBackgrounds = [
@@ -185,6 +238,12 @@ const EventForm = ({ onBack }) => {
         { id: 'n5', label: 'Annual Gala', img: noticeV5.src || noticeV5, variant: 5, category: 'announcement' },
         { id: 'n6', label: 'Luxury Event', img: noticeV6.src || noticeV6, variant: 6, category: 'announcement' },
         { id: 'n7', label: 'Grand Opening', img: noticeV7.src || noticeV7, variant: 7, category: 'announcement' },
+        { id: 'v10', label: 'Velvet Romance', img: null, variant: 10, category: 'valentine' },
+        { id: 'v11', label: 'Peony Lace', img: null, variant: 11, category: 'valentine' },
+        { id: 'r20', label: 'Peaceful Lily', img: null, variant: 20, category: 'remembering' },
+        { id: 'r21', label: 'Candle Light', img: null, variant: 21, category: 'remembering' },
+        { id: 'a30', label: 'Employee of Month', img: null, variant: 30, category: 'achievement' },
+        { id: 'a31', label: 'Graduation Gratitude', img: null, variant: 31, category: 'achievement' },
     ];
 
     const getFieldConfig = () => {
@@ -194,59 +253,109 @@ const EventForm = ({ onBack }) => {
             locationLabel: 'Location',
             locationIcon: MapPin,
             titleLabel: 'Headline',
+            subtitleLabel: 'Name / Subject',
+            dateLabel: 'Event Date',
             showPhone: true,
             phoneLabel: 'R.S.V.P',
             showImage: false,
+            requiredFields: ['title', 'date', 'location'],
+            messagePlaceholder: 'Write a warm invitation message...',
         };
 
         switch (templateType) {
             case 'birthday':
                 config.showImage = true;
-                config.titleLabel = 'Top Heading';
-                config.locationLabel = 'Venue';
+                config.titleLabel = 'Birthday Name';
+                config.locationLabel = 'Party Venue';
+                config.requiredFields = ['title', 'date', 'location', 'time'];
+                config.messagePlaceholder = 'Wishing you a very happy birthday...';
                 config.variants = [
-                    { id: 5, name: 'Golden Glitter', preview: '✨', img: birthdayV5.src || birthdayV5 },
-                    { id: 6, name: 'Modern Photo', preview: '📸', img: birthdayV6.src || birthdayV6 },
-                    { id: 7, name: 'Balloon Party', preview: '🎈', img: birthdayV7.src || birthdayV7 }
+                    { id: 5, name: 'Golden Glitter', preview: <Star className="w-5 h-5" />, img: birthdayV5.src || birthdayV5 },
+                    { id: 6, name: 'Modern Photo', preview: <Camera className="w-5 h-5" />, img: birthdayV6.src || birthdayV6 },
+                    { id: 7, name: 'Balloon Party', preview: <PartyPopper className="w-5 h-5" />, img: birthdayV7.src || birthdayV7 }
                 ];
                 break;
             case 'announcement':
                 config.showImage = false;
                 config.titleLabel = 'Event Title';
+                config.requiredFields = ['title', 'date', 'location'];
                 config.variants = [
-                    { id: 5, name: 'Annual Gala', preview: '🎩', img: noticeV5.src || noticeV5 },
-                    { id: 6, name: 'Luxury Event', preview: '👑', img: noticeV6.src || noticeV6 },
-                    { id: 7, name: 'Grand Opening', preview: '✂️', img: noticeV7.src || noticeV7 }
+                    { id: 5, name: 'Annual Gala', preview: <Calendar className="w-5 h-5" />, img: noticeV5.src || noticeV5 },
+                    { id: 6, name: 'Luxury Event', preview: <Crown className="w-5 h-5" />, img: noticeV6.src || noticeV6 },
+                    { id: 7, name: 'Grand Opening', preview: <Scissors className="w-5 h-5" />, img: noticeV7.src || noticeV7 }
                 ];
                 break;
             case 'achievement':
                 config.showTime = false;
                 config.showPhone = false;
-                config.titleLabel = 'Award Title';
-                config.locationLabel = 'Issuer';
+                config.titleLabel = 'Award Holder';
+                config.locationLabel = 'Award Title';
+                config.requiredFields = ['title', 'location', 'date'];
+
+                // Variant Specific Adjustments
+                if (currentVariant === 30) {
+                    config.showImage = true;
+                    config.titleLabel = 'Job Role';
+                    config.subtitleLabel = 'Employee Name';
+                    config.locationLabel = 'Company Name';
+                }
+                if (currentVariant === 31) {
+                    config.titleLabel = 'Graduation Year';
+                    config.subtitleLabel = 'Graduate Name';
+                    config.dateLabel = 'Class of';
+                }
+
                 config.variants = [
-                    { id: 0, name: 'Premium Certificate', preview: '📜' }
+                    { id: 0, name: 'Premium Certificate', preview: <AwardIcon className="w-5 h-5" /> },
+                    { id: 30, name: 'Employee Month', preview: <Trophy className="w-5 h-5" /> },
+                    { id: 31, name: 'Graduation', preview: <GraduationCap className="w-5 h-5" /> }
                 ];
                 break;
             case 'assembly':
                 config.showImage = true;
+                config.titleLabel = 'Assembly Name';
+                config.requiredFields = ['title', 'date', 'location'];
                 config.variants = [
-                    { id: 1, name: 'Luxury Stage', preview: '🎭' },
-                    { id: 3, name: 'Tuesday Session', preview: '🗓️' },
-                    { id: 4, name: 'Saturday Session', preview: '📅' }
+                    { id: 1, name: 'Luxury Stage', preview: <Presentation className="w-5 h-5" /> },
+                    { id: 3, name: 'Tuesday Session', preview: <Calendar className="w-5 h-5" /> },
+                    { id: 4, name: 'Saturday Session', preview: <Calendar className="w-5 h-5" /> }
+                ];
+                break;
+            case 'valentine':
+                config.titleLabel = 'Title';
+                config.locationLabel = 'Venue';
+                config.requiredFields = ['title', 'date', 'location'];
+                config.messagePlaceholder = 'Wishing you a very romantic day...';
+                config.variants = [
+                    { id: 10, name: 'Velvet Romance', preview: <Heart className="w-5 h-5" /> },
+                    { id: 11, name: 'Peony Lace', preview: <Flower2 className="w-5 h-5" /> }
+                ];
+                break;
+            case 'remembering':
+                config.titleLabel = 'Full Name';
+                config.locationLabel = 'Chapel / Location';
+                config.phoneLabel = 'Contact Person';
+                config.requiredFields = ['title', 'date', 'location'];
+                config.messagePlaceholder = 'A tribute to a life well lived...';
+                config.variants = [
+                    { id: 20, name: 'Peaceful Lily', preview: <Feather className="w-5 h-5" /> },
+                    { id: 21, name: 'Candle Light', preview: <Flame className="w-5 h-5" /> }
                 ];
                 break;
         }
         return config;
     };
 
-    const { showTime, showLocation, locationLabel, locationIcon, titleLabel, showPhone, phoneLabel, showImage, variants } = getFieldConfig();
+    const {
+        showTime, showLocation, locationLabel, locationIcon, titleLabel, subtitleLabel, dateLabel,
+        showPhone, phoneLabel, showImage, variants, requiredFields, messagePlaceholder
+    } = getFieldConfig();
 
     return (
-        <div className="min-h-screen bg-[#050505] text-white flex flex-col lg:flex-row overflow-hidden font-sans">
+        <div className="min-h-screen bg-background text-foreground flex flex-col lg:flex-row overflow-hidden font-sans transition-colors duration-500">
 
             {/* LEFT SIDEBAR: CREATIVE CONTROLS */}
-            <div className="w-full lg:w-[460px] h-screen overflow-y-auto bg-black border-r border-white/5 relative z-20 custom-scrollbar flex flex-col shadow-2xl">
+            <div className="w-full lg:w-[460px] h-screen overflow-y-auto bg-card border-r border-foreground/5 relative z-20 custom-scrollbar flex flex-col shadow-2xl transition-colors duration-500">
 
                 {/* Visual Flair: Top Gradient */}
                 <div className={`absolute top-0 left-0 w-full h-64 bg-gradient-to-b ${templates.find(t => t.id === templateType)?.color || 'from-amber-500/10'} to-transparent opacity-30 pointer-events-none z-0 transition-all duration-1000`}></div>
@@ -254,29 +363,29 @@ const EventForm = ({ onBack }) => {
                 <div className="p-8 lg:p-10 pb-32 relative z-10">
                     {/* Header Navigation */}
                     <div className="flex justify-between items-center mb-10">
-                        <button onClick={onBack} className="group flex items-center gap-3 text-[10px] font-black text-neutral-500 hover:text-white transition-all tracking-[0.3em] uppercase">
+                        <button onClick={onBack} className="group flex items-center gap-3 text-[10px] font-black text-neutral-500 hover:text-foreground transition-all tracking-[0.3em] uppercase">
                             <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" />
                             Studio
                         </button>
                         <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                            <span className="text-[10px] font-black text-amber-500 tracking-[0.2em] uppercase">Live Draft</span>
+                            <div className="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></div>
+                            <span className="text-[10px] font-black text-brand-blue tracking-widest uppercase">Live Draft</span>
                         </div>
                     </div>
 
                     <header className="mb-12">
-                        <h1 className="text-4xl font-serif text-white mb-2 leading-tight">
+                        <h1 className="text-4xl font-serif text-foreground mb-2 leading-tight">
                             Create <br />
-                            <span className="italic text-amber-500">Masterpiece</span>
+                            <span className="italic text-brand-blue">Masterpiece</span>
                         </h1>
-                        <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-[0.2em]">Tailor every detail to perfection</p>
+                        <p className="text-[10px] text-neutral-500 font-medium uppercase tracking-[0.2em]">Tailor every detail to perfection</p>
                     </header>
 
                     {/* Category Selection: Luxury Grid */}
                     <div className="mb-12">
                         <div className="flex items-center justify-between mb-4">
                             <label className="text-[10px] text-neutral-500 font-black tracking-[0.3em] uppercase">Category</label>
-                            <Palette className="w-3 h-3 text-amber-500/50" />
+                            <Palette className="w-3 h-3 text-brand-blue/50" />
                         </div>
                         <div className="grid grid-cols-2 gap-3">
                             {templates.map((t) => (
@@ -284,34 +393,33 @@ const EventForm = ({ onBack }) => {
                                     key={t.id}
                                     onClick={() => {
                                         setTemplateType(t.id);
-                                        const defaultVariant = (t.id === 'birthday' || t.id === 'announcement') ? 5 : 1;
-                                        const defaultImg = t.id === 'birthday' ? (birthdayV5.src || birthdayV5) :
-                                            t.id === 'announcement' ? (noticeV5.src || noticeV5) : null;
-
-                                        setFormData(prev => ({
-                                            ...prev,
-                                            variant: defaultVariant,
-                                            backgroundImage: defaultImg,
-                                            backgroundType: defaultImg ? 'image' : 'color'
-                                        }));
+                                        const defaultVariantMap = {
+                                            birthday: 5,
+                                            announcement: 5,
+                                            achievement: 0,
+                                            assembly: 1,
+                                            valentine: 10,
+                                            remembering: 20
+                                        };
+                                        setCurrentVariant(defaultVariantMap[t.id] || 1);
                                     }}
-                                    className={`relative flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-500 group overflow-hidden border
-                                    ${templateType === t.id
-                                            ? 'bg-white/5 border-amber-500/50 text-white shadow-xl translate-y-[-2px]'
-                                            : 'bg-neutral-900/40 border-white/5 text-neutral-500 hover:border-white/10'
+                                    className={`relative flex flex-col items-center justify-center gap-4 p-6 rounded-2xl border transition-all duration-500 group overflow-hidden
+                                        ${templateType === t.id
+                                            ? 'bg-foreground text-background border-foreground shadow-2xl scale-[1.02] z-10'
+                                            : 'bg-card/40 border-foreground/5 text-neutral-500 hover:border-foreground/10 hover:bg-card/60'
                                         }`}
                                 >
-                                    <div className={`transition-all duration-500 ${templateType === t.id ? 'text-amber-500 scale-125' : 'text-neutral-600'}`}>
-                                        {t.icon}
-                                    </div>
-                                    <span className={`text-xs font-bold tracking-widest uppercase transition-colors duration-500 ${templateType === t.id ? 'text-white' : ''}`}>
-                                        {t.label}
-                                    </span>
                                     {templateType === t.id && (
                                         <div className="absolute top-0 right-0 p-2">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-amber-500 ring-4 ring-amber-500/20"></div>
+                                            <div className="w-1 h-1 rounded-full bg-brand-gold animate-pulse"></div>
                                         </div>
                                     )}
+                                    <div className={`p-4 rounded-full transition-all duration-500 
+                                        ${templateType === t.id ? 'bg-background/20 scale-110' : 'bg-foreground/5 group-hover:scale-110'}
+                                    `}>
+                                        {t.icon}
+                                    </div>
+                                    <span className="text-[9px] font-semibold uppercase tracking-[0.25em]">{t.label}</span>
                                 </button>
                             ))}
                         </div>
@@ -321,7 +429,7 @@ const EventForm = ({ onBack }) => {
                     <div className="mb-12">
                         <div className="flex items-center justify-between mb-4">
                             <label className="text-[10px] text-neutral-500 font-black tracking-[0.3em] uppercase">Premium Collection</label>
-                            <span className="text-[9px] text-amber-500 font-bold uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">6 Styles Available</span>
+                            <span className="text-[9px] text-brand-gold font-semibold uppercase tracking-widest bg-brand-gold/10 px-2.5 py-1 rounded-full border border-brand-gold/20">6 Styles Available</span>
                         </div>
                         <div className="flex gap-4 overflow-x-auto pb-6 custom-scrollbar snap-x">
                             {predefinedBackgrounds.filter(bg => bg.category === templateType).map((bg) => (
@@ -329,19 +437,39 @@ const EventForm = ({ onBack }) => {
                                     key={bg.id}
                                     onClick={() => selectPredefinedTemplate(bg)}
                                     className={`relative flex-shrink-0 w-32 aspect-[3/4] rounded-2xl overflow-hidden border-2 transition-all duration-500 group snap-start
-                                        ${formData.backgroundImage === bg.img
-                                            ? 'border-amber-500 shadow-[0_15px_30px_rgba(234,179,8,0.3)] scale-105'
+                                        ${activeData.backgroundImage === bg.img
+                                            ? 'border-brand-blue shadow-[0_15px_30px_rgba(37,99,235,0.3)] scale-105'
                                             : 'border-white/5 hover:border-white/20 scale-100'
                                         }`}
                                 >
-                                    <img src={bg.img} alt={bg.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                    <div className={`absolute inset-0 bg-black/60 transition-opacity duration-500 ${formData.backgroundImage === bg.img ? 'opacity-0' : 'opacity-40 group-hover:opacity-0'}`}></div>
+                                    {bg.img ? (
+                                        <img src={bg.img} alt={bg.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                    ) : (
+                                        <div className={`w-full h-full flex items-center justify-center
+                                            ${bg.category === 'valentine' ? 'bg-gradient-to-br from-red-900 to-red-950' :
+                                                bg.category === 'remembering' ? 'bg-gradient-to-br from-neutral-800 to-black' :
+                                                    'bg-gradient-to-br from-brand-blue/10 to-brand-blue/20'}
+                                        `}>
+                                            <div className="flex flex-col items-center gap-1 opacity-40">
+                                                {bg.category === 'valentine' ? <Heart className="w-6 h-6 text-red-400" /> :
+                                                    bg.category === 'remembering' ? <Feather className="w-6 h-6 text-neutral-400" /> :
+                                                        <ImageIcon className="w-6 h-6 text-brand-blue" />}
+                                                <span className="text-[7px] font-black uppercase tracking-widest text-white/50">Premium</span>
+                                            </div>
+                                        </div>
+                                    )}
+                                    <div className={`absolute inset-0 bg-black/60 transition-opacity duration-500 ${activeData.backgroundImage === bg.img ? 'opacity-0' : 'opacity-40 group-hover:opacity-0'}`}></div>
                                     <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black to-transparent">
                                         <span className="text-[9px] text-white font-black uppercase tracking-widest leading-none block">{bg.label}</span>
                                     </div>
-                                    {formData.backgroundImage === bg.img && (
-                                        <div className="absolute top-2 right-2 w-5 h-5 bg-amber-500 rounded-full flex items-center justify-center shadow-2xl animate-bounce">
-                                            <Sparkles className="w-2.5 h-2.5 text-black" />
+                                    {activeData.backgroundImage === bg.img && !bg.img && (
+                                        <div className="absolute top-2 right-2 w-5 h-5 bg-brand-blue rounded-full flex items-center justify-center shadow-2xl animate-bounce">
+                                            <CheckCircle className="w-2.5 h-2.5 text-white" />
+                                        </div>
+                                    )}
+                                    {activeData.backgroundImage === bg.img && bg.img && (
+                                        <div className="absolute top-2 right-2 w-5 h-5 bg-brand-blue rounded-full flex items-center justify-center shadow-2xl animate-bounce">
+                                            <CheckCircle className="w-2.5 h-2.5 text-white" />
                                         </div>
                                     )}
                                 </button>
@@ -359,20 +487,34 @@ const EventForm = ({ onBack }) => {
                                 {variants.map((v) => (
                                     <button
                                         key={v.id}
-                                        onClick={() => setFormData(prev => ({
-                                            ...prev,
-                                            variant: v.id,
-                                            backgroundImage: v.img || prev.backgroundImage,
-                                            backgroundType: v.img ? 'image' : prev.backgroundType
-                                        }))}
+                                        onClick={() => {
+                                            setCurrentVariant(v.id);
+                                            if (!formData[`${templateType}-${v.id}`]) {
+                                                setFormData(prev => ({
+                                                    ...prev,
+                                                    [`${templateType}-${v.id}`]: {
+                                                        ...initialFormState,
+                                                        variant: v.id,
+                                                        backgroundImage: v.img || initialFormState.backgroundImage,
+                                                        backgroundType: v.img ? 'image' : 'color'
+                                                    }
+                                                }));
+                                            }
+                                        }}
                                         className={`flex items-center gap-3 px-4 py-3 rounded-2xl border transition-all duration-300
-                                            ${formData.variant === v.id
-                                                ? 'bg-amber-500/10 border-amber-500 text-amber-500'
-                                                : 'bg-white/5 border-white/5 text-neutral-500 hover:border-white/10 hover:text-white'
+                                            ${activeData.variant === v.id
+                                                ? 'bg-brand-blue/10 border-brand-blue text-brand-blue'
+                                                : 'bg-foreground/5 border-foreground/5 text-neutral-500 hover:border-foreground/10 hover:text-foreground'
                                             }`}
                                     >
-                                        <span className="text-lg">{v.preview}</span>
-                                        <span className="text-[10px] font-black uppercase tracking-widest">{v.name}</span>
+                                        <div className={`p-3 rounded-xl transition-all duration-500 bg-foreground/5 group-hover:bg-brand-blue/10
+                                            ${activeData.variant === v.id ? 'bg-brand-blue/20 rotate-12 scale-110' : 'rotate-0 scale-100'}
+                                        `}>
+                                            <div className={activeData.variant === v.id ? 'text-brand-blue' : 'text-neutral-500'}>
+                                                {v.preview}
+                                            </div>
+                                        </div>
+                                        <span className="text-[10px] font-semibold uppercase tracking-widest">{v.name}</span>
                                     </button>
                                 ))}
                             </div>
@@ -383,58 +525,61 @@ const EventForm = ({ onBack }) => {
                     <div className="space-y-10">
                         <section className="space-y-4">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="h-[1px] flex-1 bg-white/5"></div>
+                                <div className="h-[1px] flex-1 bg-foreground/5"></div>
                                 <h3 className="text-[9px] font-black text-neutral-600 tracking-[0.4em] uppercase">Content Studio</h3>
-                                <div className="h-[1px] flex-1 bg-white/5"></div>
+                                <div className="h-[1px] flex-1 bg-foreground/5"></div>
                             </div>
 
                             <div className="grid grid-cols-2 gap-4">
                                 <InputGroup
-                                    label={titleLabel} name="title" value={formData.title} onChange={handleChange}
-                                    icon={Wand2} placeholder="Headline" delay={100}
+                                    label={titleLabel} name="title" value={activeData.title} onChange={handleChange}
+                                    icon={Type} placeholder="Headline" delay={100}
                                     isFocused={focusedField === 'title'} onFocus={() => handleFocus('title')} onBlur={handleBlur}
+                                    required={requiredFields.includes('title')}
                                 />
                                 <InputGroup
-                                    label="Name / Subject" name="subtitle" value={formData.subtitle} onChange={handleChange}
+                                    label={subtitleLabel} name="subtitle" value={activeData.subtitle} onChange={handleChange}
                                     icon={User} placeholder="Who is it for?" delay={200}
                                     isFocused={focusedField === 'subtitle'} onFocus={() => handleFocus('subtitle')} onBlur={handleBlur}
+                                    required={requiredFields.includes('subtitle')}
                                 />
                             </div>
 
                             <InputGroup
-                                label="Invitation Message" name="message" value={formData.message} onChange={handleChange}
-                                icon={AlignLeft} placeholder="Something memorable..." multiline delay={300}
+                                label="Invitation Message" name="message" value={activeData.message} onChange={handleChange}
+                                icon={AlignLeft} placeholder={messagePlaceholder} multiline delay={300}
                                 isFocused={focusedField === 'message'} onFocus={() => handleFocus('message')} onBlur={handleBlur}
+                                required={requiredFields.includes('message')}
                             />
                         </section>
 
                         {showImage && (
                             <section className="space-y-4">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className="h-[1px] flex-1 bg-white/5"></div>
+                                    <div className="h-[1px] flex-1 bg-foreground/5"></div>
                                     <h3 className="text-[9px] font-black text-neutral-600 tracking-[0.4em] uppercase">Visual Assets</h3>
-                                    <div className="h-[1px] flex-1 bg-white/5"></div>
+                                    <div className="h-[1px] flex-1 bg-foreground/5"></div>
                                 </div>
-                                <div className="bg-neutral-900/20 backdrop-blur-xl border border-white/5 rounded-3xl p-6 group hover:border-amber-500/20 transition-all duration-500 shadow-xl">
+                                <div className="bg-foreground/5 backdrop-blur-xl border border-foreground/5 rounded-3xl p-6 group hover:border-brand-blue/20 transition-all duration-500 shadow-xl">
                                     <div className="flex items-center gap-6 mb-6">
-                                        <div className="w-24 h-24 bg-black rounded-2xl flex items-center justify-center overflow-hidden border border-white/10 shadow-inner overflow-hidden">
-                                            {templateImages[`${templateType}-${formData.variant}`] ? (
-                                                <img src={templateImages[`${templateType}-${formData.variant}`]} alt="Preview" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                        <div className="w-24 h-24 bg-background rounded-2xl flex items-center justify-center overflow-hidden border border-foreground/10 shadow-inner">
+                                            {templateImages[`${templateType}-${activeData.variant}`] ? (
+                                                <img src={templateImages[`${templateType}-${activeData.variant}`]} alt="Preview" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                                             ) : (
                                                 <div className="flex flex-col items-center gap-2 opacity-30 group-hover:opacity-100 transition-opacity">
-                                                    <Camera className="w-8 h-8 text-white" />
-                                                    <span className="text-[8px] font-black uppercase tracking-widest text-white">Choose Photo</span>
+                                                    <Camera className="w-8 h-8 text-foreground" />
+                                                    <span className="text-[8px] font-black uppercase tracking-widest text-foreground">Choose Photo</span>
                                                 </div>
                                             )}
                                         </div>
                                         <div className="flex-1">
-                                            <h4 className="text-sm font-bold text-white mb-2 uppercase tracking-widest">Personal Image</h4>
+                                            <h4 className="text-sm font-bold text-foreground mb-2 uppercase tracking-widest">Personal Image</h4>
                                             <p className="text-[10px] text-neutral-500 font-medium leading-relaxed uppercase tracking-wider">High resolution JPG or PNG recommended for professional results.</p>
                                         </div>
                                     </div>
                                     <input type="file" accept="image/*" onChange={handleImageUpload} id="file-upload" className="hidden" />
-                                    <label htmlFor="file-upload" className="flex items-center justify-center gap-3 w-full py-4 bg-white/5 hover:bg-white/10 text-white rounded-2xl cursor-pointer transition-all duration-300 border border-white/10 active:scale-[0.98] group-hover:border-amber-500/30">
-                                        <Sparkles className="w-4 h-4 text-amber-500" />
+                                    <label htmlFor="file-upload" className="flex items-center justify-center gap-3 w-full py-4 bg-foreground/5 hover:bg-foreground/10 text-foreground rounded-2xl cursor-pointer transition-all duration-300 border border-foreground/10 active:scale-[0.98] group-hover:border-brand-blue/30 shadow-xl">
+                                        <ImageIcon className="w-4 h-4 text-brand-blue" />
                                         <span className="text-xs font-black tracking-[0.2em] uppercase">Select Asset</span>
                                     </label>
                                 </div>
@@ -443,38 +588,42 @@ const EventForm = ({ onBack }) => {
 
                         <section className="space-y-4">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="h-[1px] flex-1 bg-white/5"></div>
+                                <div className="h-[1px] flex-1 bg-foreground/5"></div>
                                 <h3 className="text-[9px] font-black text-neutral-600 tracking-[0.4em] uppercase">Logistics</h3>
-                                <div className="h-[1px] flex-1 bg-white/5"></div>
+                                <div className="h-[1px] flex-1 bg-foreground/5"></div>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 <InputGroup
-                                    label="Event Date" name="date" value={formData.date} onChange={handleChange}
+                                    label={dateLabel} name="date" value={activeData.date} onChange={handleChange}
                                     icon={Calendar} placeholder="Date" delay={400}
                                     isFocused={focusedField === 'date'} onFocus={() => handleFocus('date')} onBlur={handleBlur}
+                                    required={requiredFields.includes('date')}
                                 />
                                 {showTime && (
                                     <InputGroup
-                                        label="Time" name="time" value={formData.time} onChange={handleChange}
+                                        label="Time" name="time" value={activeData.time} onChange={handleChange}
                                         icon={Clock} placeholder="00:00" delay={500}
                                         isFocused={focusedField === 'time'} onFocus={() => handleFocus('time')} onBlur={handleBlur}
+                                        required={requiredFields.includes('time')}
                                     />
                                 )}
                             </div>
 
                             {showLocation && (
                                 <InputGroup
-                                    label={locationLabel} name="location" value={formData.location} onChange={handleChange}
+                                    label={locationLabel} name="location" value={activeData.location} onChange={handleChange}
                                     icon={locationIcon} placeholder="Venue" delay={600}
                                     isFocused={focusedField === 'location'} onFocus={() => handleFocus('location')} onBlur={handleBlur}
+                                    required={requiredFields.includes('location')}
                                 />
                             )}
 
                             {showPhone && (
                                 <InputGroup
-                                    label={phoneLabel} name="phone" value={formData.phone} onChange={handleChange}
+                                    label={phoneLabel} name="phone" value={activeData.phone} onChange={handleChange}
                                     icon={Phone} placeholder="Phone / Email" delay={700}
                                     isFocused={focusedField === 'phone'} onFocus={() => handleFocus('phone')} onBlur={handleBlur}
+                                    required={requiredFields.includes('phone')}
                                 />
                             )}
                         </section>
@@ -482,43 +631,44 @@ const EventForm = ({ onBack }) => {
                 </div>
 
                 {/* Fixed Footer Actions */}
-                <div className="sticky bottom-0 left-0 w-full p-8 bg-black/80 backdrop-blur-2xl border-t border-white/10 z-[100] shadow-[0_-30px_60px_rgba(0,0,0,0.8)] flex flex-col gap-4">
+                <div className="sticky bottom-0 left-0 w-full p-8 bg-background/80 backdrop-blur-2xl border-t border-foreground/10 z-[100] shadow-[0_-30px_60px_rgba(0,0,0,0.1)] dark:shadow-[0_-30px_60px_rgba(0,0,0,0.8)] flex flex-col gap-4">
                     <div className="flex gap-4">
                         <button
                             onClick={handleSave}
                             disabled={isSaving}
-                            className="flex-1 rounded-2xl bg-white/5 text-white font-black py-4 transition-all duration-300 hover:bg-white/10 border border-white/10 active:scale-[0.98] disabled:opacity-50"
+                            className="flex-1 rounded-2xl bg-foreground/5 text-foreground font-black py-4 transition-all duration-300 hover:bg-foreground/10 border border-foreground/10 active:scale-[0.98] disabled:opacity-50"
                         >
-                            <span className="flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px]">
-                                {isSaving ? <Loader2 className="w-4 h-4 animate-spin text-amber-500" /> : <Save className="w-4 h-4 text-amber-500" />}
+                            <span className="flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px] font-semibold">
+                                {isSaving ? <Loader2 className="w-4 h-4 animate-spin text-brand-blue" /> : <Save className="w-4 h-4 text-brand-blue" />}
                                 Save
                             </span>
                         </button>
                         <button
                             onClick={handleDownload}
-                            className="flex-[2.5] relative group overflow-hidden rounded-2xl bg-amber-500 text-black font-black py-4 shadow-[0_15px_30px_rgba(234,179,8,0.2)] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(234,179,8,0.4)] hover:-translate-y-1 active:translate-y-0"
+                            className="flex-[2.5] relative group overflow-hidden rounded-2xl bg-brand-blue text-white py-4 shadow-[0_15px_30px_rgba(37,99,235,0.2)] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(37,99,235,0.4)] hover:-translate-y-1 active:translate-y-0"
                         >
                             <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                            <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px]">
+                            <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px] font-semibold">
                                 <Download className="w-4 h-4" />
                                 Export PDF
                             </span>
                         </button>
                     </div>
                     <div className="flex items-center justify-center gap-2 opacity-20">
-                        <div className="h-[1px] w-4 bg-white"></div>
-                        <span className="text-[8px] font-black tracking-[0.4em] uppercase">Powered by Imena Studio</span>
-                        <div className="h-[1px] w-4 bg-white"></div>
+                        <div className="h-[1px] w-4 bg-foreground"></div>
+                        <span className="text-[8px] font-semibold tracking-[0.4em] uppercase">Powered by Imena Studio</span>
+                        <div className="h-[1px] w-4 bg-foreground"></div>
                     </div>
                 </div>
             </div>
 
             {/* RIGHT SIDEBAR: PREVIEW STAGE */}
-            <div className="flex-1 relative flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
+            <div className="flex-1 relative flex items-center justify-center bg-background overflow-hidden transition-colors duration-500">
 
                 {/* Cinematic Environment */}
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-amber-500/5 via-transparent to-transparent opacity-50 blur-[150px]"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-brand-blue/10 via-transparent to-transparent opacity-50 blur-[150px]"></div>
+                    <div className="absolute bottom-0 right-0 w-[50%] h-[50%] bg-[radial-gradient(circle_at_100%_100%,rgba(245,158,11,0.05)_0%,transparent_70%)] blur-[100px]"></div>
                     {/* Perspective lines */}
                     <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 </div>
@@ -526,8 +676,8 @@ const EventForm = ({ onBack }) => {
                 <div className="relative z-10 flex flex-col items-center">
                     {/* Label/Status */}
                     <div className="mb-12 flex flex-col items-center gap-4 animate-fade-in">
-                        <span className="text-[10px] font-black text-white/30 tracking-[0.6em] uppercase">Interactive Preview</span>
-                        <div className="h-20 w-[1px] bg-gradient-to-b from-transparent via-amber-500/50 to-transparent"></div>
+                        <span className="text-[10px] font-semibold text-foreground/30 tracking-[0.6em] uppercase">Interactive Preview</span>
+                        <div className="h-20 w-[1px] bg-gradient-to-b from-transparent via-brand-blue/50 to-transparent"></div>
                     </div>
 
                     {/* The Masterpiece Stage */}
@@ -536,10 +686,10 @@ const EventForm = ({ onBack }) => {
                         <div className="absolute -inset-10 bg-black/60 blur-[60px] rounded-full opacity-60 group-hover:opacity-80 transition-opacity"></div>
 
                         {/* Frame and Content */}
-                        <div className="relative shadow-[0_80px_150px_-30px_rgba(0,0,0,0.9)] rounded-[5px] ring-[0.5px] ring-white/20 overflow-hidden transform-gpu">
+                        <div className="relative shadow-[0_80px_150px_-30px_rgba(0,0,0,0.9)] rounded-[5px] ring-[0.5px] ring-foreground/20 overflow-hidden transform-gpu">
                             <InvitationPreview
                                 ref={previewRef}
-                                data={{ ...formData, image: templateImages[`${templateType}-${formData.variant}`] }}
+                                data={{ ...activeData, image: templateImages[`${templateType}-${activeData.variant}`] }}
                                 templateType={templateType}
                             />
                             {/* Surface Reflection */}
@@ -548,9 +698,9 @@ const EventForm = ({ onBack }) => {
 
                         {/* Visual Quality Indicator */}
                         <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-4 group-hover:translate-y-0">
-                            <div className="flex items-center gap-2 px-4 py-2 bg-black/80 backdrop-blur-xl border border-white/10 rounded-full">
-                                <Sparkles className="w-3 h-3 text-amber-500" />
-                                <span className="text-[9px] font-black text-white uppercase tracking-widest whitespace-nowrap">Premium Print Quality</span>
+                            <div className="flex items-center gap-2 px-4 py-2 bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-full">
+                                <CheckCircle className="w-3 h-3 text-brand-gold" />
+                                <span className="text-[9px] font-semibold text-foreground uppercase tracking-widest whitespace-nowrap">Premium Print Quality</span>
                             </div>
                         </div>
                     </div>
@@ -562,7 +712,7 @@ const EventForm = ({ onBack }) => {
                     <div className="w-8 h-[1px] bg-neutral-800"></div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
