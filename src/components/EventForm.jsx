@@ -7,8 +7,9 @@ import {
     ArrowLeft, Download, Calendar, MapPin, Clock, Phone, FileText, Save, Loader2
 } from 'lucide-react';
 import InvitationPreview from './InvitationPreview';
-import { downloadPDF } from '../utils/pdfUtils';
+import { downloadPDF, downloadPNG } from '../utils/pdfUtils';
 import { createInvitation, uploadImage } from '../utils/api';
+import Toast from './Toast';
 
 import birthdayV5 from '../assets/templates/birthday_variant_5.jpg';
 import birthdayV6 from '../assets/templates/birthday_variant_6.jpg';
@@ -105,7 +106,8 @@ const EventForm = ({ onBack }) => {
         message: '',
         variant: 1,
         backgroundType: 'color',
-        backgroundImage: null
+        backgroundImage: null,
+        image: null // Personal photo
     };
 
     const [formData, setFormData] = useState({
@@ -141,6 +143,11 @@ const EventForm = ({ onBack }) => {
     const [templateImages, setTemplateImages] = useState({});
     const [imageFiles, setImageFiles] = useState({});
     const [isSaving, setIsSaving] = useState(false);
+    const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
+
+    const showToast = (message, type = 'success') => {
+        setToast({ show: true, message, type });
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -185,31 +192,32 @@ const EventForm = ({ onBack }) => {
         const missingFields = requiredFields.filter(f => !activeData[f]);
 
         if (missingFields.length > 0) {
-            alert(`Please complete the required fields: ${missingFields.join(', ')}`);
+            showToast(`Missing fields: ${missingFields.join(', ')}`, 'error');
             setIsSaving(false);
             return;
         }
 
         try {
-            let imageUrl = activeData.backgroundImage;
+            let personalImageUrl = activeData.image; // Should be null or existing URL
             const imageKey = `${templateType}-${activeData.variant}`;
             const file = imageFiles[imageKey];
 
             if (file) {
                 const uploadRes = await uploadImage(file);
-                imageUrl = uploadRes.url;
+                personalImageUrl = uploadRes.url;
             }
 
             await createInvitation({
                 ...activeData,
                 templateType,
-                imageUrl: imageUrl
+                image: personalImageUrl,
+                backgroundImage: activeData.backgroundImage
             });
 
-            alert('Invitation saved successfully!');
+            showToast('Invitation saved successfully!', 'success');
         } catch (error) {
             console.error(error);
-            alert('Failed to save invitation');
+            showToast('Failed to save invitation', 'error');
         } finally {
             setIsSaving(false);
         }
@@ -218,8 +226,14 @@ const EventForm = ({ onBack }) => {
     const handleFocus = (name) => setFocusedField(name);
     const handleBlur = () => setFocusedField(null);
 
-    const handleDownload = () => {
-        downloadPDF('invitation-card', `PaperPop-${activeData.title || 'Invitation'}.pdf`);
+    const handleDownload = async () => {
+        try {
+            await downloadPDF('invitation-card', `PaperPop-${activeData.title || 'Invitation'}.pdf`);
+            showToast('PDF Downloaded Successfully', 'success');
+        } catch (error) {
+            console.error(error);
+            showToast('Failed to download PDF', 'error');
+        }
     };
 
     const templates = [
@@ -312,7 +326,7 @@ const EventForm = ({ onBack }) => {
                 ];
                 break;
             case 'assembly':
-                config.showImage = true;
+                config.showImage = false;
                 config.titleLabel = 'Assembly Name';
                 config.requiredFields = ['title', 'date', 'location'];
                 config.variants = [
@@ -323,6 +337,7 @@ const EventForm = ({ onBack }) => {
                 break;
             case 'valentine':
                 config.titleLabel = 'Title';
+                config.subtitleLabel = 'Couple Names / Subtitle';
                 config.locationLabel = 'Venue';
                 config.requiredFields = ['title', 'date', 'location'];
                 config.messagePlaceholder = 'Wishing you a very romantic day...';
@@ -333,6 +348,7 @@ const EventForm = ({ onBack }) => {
                 break;
             case 'remembering':
                 config.titleLabel = 'Full Name';
+                config.subtitleLabel = 'Life Dates (e.g. 1950 - 2024)';
                 config.locationLabel = 'Chapel / Location';
                 config.phoneLabel = 'Contact Person';
                 config.requiredFields = ['title', 'date', 'location'];
@@ -653,6 +669,24 @@ const EventForm = ({ onBack }) => {
                                 Export PDF
                             </span>
                         </button>
+                        <button
+                            onClick={async () => {
+                                try {
+                                    await downloadPNG('invitation-card', `PaperPop-${activeData.title || 'Invitation'}.png`);
+                                    showToast('PNG Downloaded Successfully', 'success');
+                                } catch (error) {
+                                    console.error(error);
+                                    showToast('Failed to download PNG', 'error');
+                                }
+                            }}
+                            className="flex-[1] relative group overflow-hidden rounded-2xl bg-brand-gold text-white py-4 shadow-[0_15px_30px_rgba(245,158,11,0.2)] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(245,158,11,0.4)] hover:-translate-y-1 active:translate-y-0"
+                        >
+                            <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                            <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.3em] uppercase text-[10px] font-semibold">
+                                <ImageIcon className="w-4 h-4" />
+                                PNG
+                            </span>
+                        </button>
                     </div>
                     <div className="flex items-center justify-center gap-2 opacity-20">
                         <div className="h-[1px] w-4 bg-foreground"></div>
@@ -712,7 +746,15 @@ const EventForm = ({ onBack }) => {
                     <div className="w-8 h-[1px] bg-neutral-800"></div>
                 </div>
             </div>
-        </div >
+
+            {toast.show && (
+                <Toast
+                    message={toast.message}
+                    type={toast.type}
+                    onClose={() => setToast(prev => ({ ...prev, show: false }))}
+                />
+            )}
+        </div>
     );
 };
 

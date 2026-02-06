@@ -12,9 +12,9 @@ const BirthdayTemplate = ({ data }) => {
     } : {};
 
     const ImenaBranding = () => (
-        <div className="absolute bottom-6 right-6 z-[60] flex items-center gap-3 opacity-80 select-none pointer-events-none hover:opacity-100 transition-opacity">
-            <img src={brandLogo.src || brandLogo} alt="Imena" className="h-8 w-auto drop-shadow-lg" />
-            <span className="text-[9px] font-bold text-white/60 uppercase tracking-[0.2em]">Designed by Imena</span>
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[60] flex flex-col items-center gap-1.5 opacity-60 select-none pointer-events-none hover:opacity-100 transition-opacity">
+            <img src={brandLogo.src || brandLogo} alt="Imena" className="h-7 w-auto drop-shadow-lg" />
+            <span className="text-[7px] font-black text-white/40 uppercase tracking-[0.3em] whitespace-nowrap">Designed by Imena</span>
         </div>
     );
 
@@ -32,7 +32,7 @@ const BirthdayTemplate = ({ data }) => {
                         <span className="text-[9px] font-black tracking-[0.4em] text-brand-gold uppercase">You are invited to the</span>
                     </div>
 
-                    <h1 className="text-8xl font-cursive text-brand-gold mb-0 leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]" style={{ fontFamily: "'Great Vibes', cursive" }}>
+                    <h1 className="text-8xl font-cursive text-brand-gold mb-6 leading-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]" style={{ fontFamily: "'Great Vibes', cursive" }}>
                         {subtitle || "Birthday"}
                     </h1>
                     <h2 className="text-4xl font-black tracking-[0.6em] text-brand-gold uppercase mb-10 drop-shadow-lg">

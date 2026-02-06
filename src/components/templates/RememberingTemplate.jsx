@@ -1,5 +1,6 @@
 import React from 'react';
 import brandLogo from '@/assets/brand-logo.png';
+import rememberingLogo from '@/assets/remembering-logo.png';
 
 const RememberingTemplate = ({ data }) => {
     const { title, subtitle, date, image, message, variant = 20, location, time, phone, backgroundType, backgroundImage } = data;
@@ -10,10 +11,16 @@ const RememberingTemplate = ({ data }) => {
         backgroundPosition: 'center'
     } : {};
 
+    const RememberingLogo = () => (
+        <div className="absolute top-6 left-8 z-[60] flex flex-col items-start gap-1 opacity-90 select-none pointer-events-none">
+            <img src={rememberingLogo.src || rememberingLogo} alt="In Memory" className="h-20 w-auto drop-shadow-xl mix-blend-multiply" />
+        </div>
+    );
+
     const ImenaBranding = () => (
-        <div className="absolute bottom-6 right-6 z-[60] flex items-center gap-3 opacity-80 select-none pointer-events-none hover:opacity-100 transition-opacity">
-            <img src={brandLogo.src || brandLogo} alt="Imena" className="h-8 w-auto drop-shadow-lg" />
-            <span className="text-[9px] font-bold text-white/60 uppercase tracking-[0.2em]">Designed by Imena</span>
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[60] flex flex-col items-center gap-1.5 opacity-60 select-none pointer-events-none hover:opacity-100 transition-opacity">
+            <img src={brandLogo.src || brandLogo} alt="Imena" className="h-7 w-auto drop-shadow-lg" />
+            <span className="text-[7px] font-black tracking-[0.3em] uppercase text-neutral-400 whitespace-nowrap">Designed by Imena</span>
         </div>
     );
 
@@ -21,22 +28,23 @@ const RememberingTemplate = ({ data }) => {
     if (variant === 20) {
         return (
             <div className="relative w-full h-full bg-gradient-to-b from-gray-50 via-white to-gray-100 text-neutral-800 overflow-hidden font-serif" style={backgroundStyle}>
+                <RememberingLogo />
                 <ImenaBranding />
 
                 {/* Heavenly Light Rays */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20">
-                    <div className="absolute top-0 w-full h-96 bg-gradient-to-b from-amber-200/40 via-white/30 to-transparent"></div>
+                    <div className="absolute top-0 w-full h-96 bg-gradient-to-b from-neutral-200/40 via-white/30 to-transparent"></div>
                 </div>
 
                 {/* Subtle Marble Texture Effect */}
                 <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(0,0,0,0.05) 0%, transparent 50%)' }}></div>
 
                 {/* Gold Accent Borders */}
-                <div className="absolute inset-10 border border-amber-600/20 rounded-sm pointer-events-none"></div>
-                <div className="absolute inset-14 border border-amber-500/10 rounded-sm pointer-events-none"></div>
+                <div className="absolute inset-10 border border-neutral-600/20 rounded-sm pointer-events-none"></div>
+                <div className="absolute inset-14 border border-neutral-500/10 rounded-sm pointer-events-none"></div>
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full px-16 text-center">
-                    <div className="mb-10 bg-white/60 backdrop-blur-sm px-8 py-2 rounded-full border border-amber-600/20">
+                    <div className="mb-10 bg-white/60 backdrop-blur-sm px-8 py-2 rounded-full border border-neutral-600/20">
                         <span className="text-[9px] font-black tracking-[0.5em] uppercase text-neutral-500">In Loving Memory</span>
                     </div>
 
@@ -44,7 +52,7 @@ const RememberingTemplate = ({ data }) => {
                         {title || "Johnathan Doe"}
                     </h1>
 
-                    <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-amber-600/40 to-transparent mb-6"></div>
+                    <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-neutral-600/40 to-transparent mb-6"></div>
 
                     <div className="text-sm font-medium tracking-[0.2em] text-neutral-600 mb-12">
                         {subtitle || "1950 — 2026"}
@@ -78,6 +86,7 @@ const RememberingTemplate = ({ data }) => {
     if (variant === 21) {
         return (
             <div className="relative w-full h-full bg-gradient-to-b from-neutral-900 via-black to-neutral-950 text-white overflow-hidden font-sans" style={backgroundStyle}>
+                <RememberingLogo />
                 <ImenaBranding />
 
                 {/* Soft Candle Glow - Amber Light */}
@@ -133,6 +142,7 @@ const RememberingTemplate = ({ data }) => {
     // Default Fallback
     return (
         <div className="relative w-full h-full bg-[#1e1e1e] text-white flex flex-col items-center justify-center p-12 text-center" style={backgroundStyle}>
+            <RememberingLogo />
             <ImenaBranding />
             <div className="border border-white/10 p-12 w-full h-full flex flex-col items-center justify-center bg-black/20 backdrop-blur-sm">
                 <div className="text-[10px] font-black tracking-[0.6em] uppercase text-neutral-500 mb-8 font-sans">In Loving Memory</div>

@@ -33,7 +33,7 @@ const InvitationSchema = new mongoose.Schema({
     templateType: {
         type: String,
         required: true,
-        enum: ['birthday', 'assembly', 'announcement', 'achievement'],
+        enum: ['birthday', 'assembly', 'announcement', 'achievement', 'remembering', 'valentine'],
         default: 'birthday',
     },
     variant: {
@@ -41,8 +41,15 @@ const InvitationSchema = new mongoose.Schema({
         required: true,
         default: 1,
     },
-    imageUrl: {
-        type: String, // URL to uploaded image
+    image: {
+        type: String, // Personal uploaded photo
+    },
+    backgroundImage: {
+        type: String, // Template background texture/image
+    },
+    backgroundType: {
+        type: String,
+        default: 'color',
     },
     createdAt: {
         type: Date,
